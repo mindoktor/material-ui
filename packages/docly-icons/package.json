@@ -1,0 +1,11 @@
+{
+  "name": "@docly/guide-icons",
+  "main": "src/index.js",
+  "private": true,
+  "author": "Docly Healthcare AB",
+  "version": "0.0.1",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=6.0.0"
+  }
+}
