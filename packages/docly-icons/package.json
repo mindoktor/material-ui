@@ -1,11 +1,34 @@
 {
   "name": "@docly/guide-icons",
   "main": "src/index.js",
+  "scripts": {
+    "src:icons": "rimraf src/icons && cd ../../ && babel-node --config-file ./babel.config.js packages/docly-icons/builder.js --output-dir packages/docly-icons/src/icons --svg-dir packages/docly-icons/src/images"
+  },
   "private": true,
   "author": "Docly Healthcare AB",
   "version": "0.0.1",
   "sideEffects": false,
   "engines": {
     "node": ">=6.0.0"
+  },
+  "peerDependencies": {
+    "@material-ui/core": "^3.0.0",
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "7.1.2",
+    "recompose": "0.28.0 - 0.30.0"
+  },
+  "devDependencies": {
+    "fs-extra": "^7.0.0",
+    "mkdirp": "^0.5.0",
+    "mustache": "^3.0.0",
+    "svgo": "^1.0.5",
+    "temp": "^0.8.3",
+    "yargs": "^12.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

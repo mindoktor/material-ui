@@ -13,10 +13,9 @@ import SVGO from 'svgo';
 
 const globAsync = util.promisify(glob);
 const RENAME_FILTER_DEFAULT = './renameFilters/default';
-const RENAME_FILTER_MUI = './renameFilters/material-design-icons';
 
 const svgo = new SVGO({
-  floatPrecision: 4,
+  floatPrecision: 8,
   plugins: [
     { cleanupAttrs: true },
     { removeDoctype: true },
@@ -33,7 +32,7 @@ const svgo = new SVGO({
     { removeEmptyText: true },
     { removeEmptyContainers: true },
     { removeViewBox: true },
-    { cleanupEnableBackground: true },
+    { removeViewBox: false },
     { minifyStyles: true },
     { convertStyleToAttrs: true },
     { convertColors: true },
@@ -256,5 +255,4 @@ export default {
   getComponentName,
   main,
   RENAME_FILTER_DEFAULT,
-  RENAME_FILTER_MUI,
 };

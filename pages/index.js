@@ -12,6 +12,7 @@ import HomeFooter from 'docs/src/modules/components/HomeFooter';
 import AppFrame from 'docs/src/modules/components/AppFrame';
 import Link from 'docs/src/modules/components/Link';
 import Head from 'docs/src/modules/components/Head';
+import getIcon, { iconsByEntrywayId } from '@docly/guide-icons';
 
 const styles = theme => ({
   root: {
@@ -86,7 +87,6 @@ class HomePage extends React.Component {
 
   render() {
     const classes = this.props.classes;
-
     return (
       <AppFrame>
         <div className={classes.root}>
@@ -119,6 +119,17 @@ class HomePage extends React.Component {
                 >
                   {"React components that implement Google's Material Design."}
                 </Typography>
+                <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+                  {Object.keys(iconsByEntrywayId).map(id => {
+                    const Icon = getIcon(id);
+                    return (
+                      <div>
+                        <Icon width="56" height="56" viewBox="0 0 56 56" />
+                        <div style={{ textAlign: 'center' }}>{id}</div>
+                      </div>
+                    );
+                  })}
+                </div>
                 <Button
                   component={buttonProps => (
                     <Link
