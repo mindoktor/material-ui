@@ -7,27 +7,9 @@ import util from 'util';
 import glob from 'glob';
 
 const globAsync = util.promisify(glob);
-/**
- * Return Pascal-Cased component name.
- *
- * @param {string} svgPath
- * @returns {string} class name
- */
-function getComponentName(destPath) {
-  const splitregex = new RegExp(`[${path.sep}-]+`);
-
-  const parts = destPath
-    .replace('.js', '')
-    .split(splitregex)
-    .map(part => {
-      return part.charAt(0).toUpperCase() + part.substring(1);
-    });
-
-  return parts.join('');
-}
 
 async function generateIndex(options) {
-  const files = await globAsync(path.join(options.outputDir, '*.js'));
+  const files = await globAsync(path.join(options.out, '*.js'));
   const index = files
     .map(file => {
       const typename = path.basename(file).replace('.js', '');
@@ -35,14 +17,14 @@ async function generateIndex(options) {
     })
     .join('');
 
-  await fse.writeFile(path.join(options.outputDir, 'index.js'), index);
+  await fse.writeFile(path.join(options.out, 'index.js'), index);
 }
 
 async function main(options) {
   try {
-    const exists1 = await fse.exists(options.outputDir);
+    const exists1 = await fse.exists(options.out);
     if (!exists1) {
-      await fse.mkdir(options.outputDir);
+      await fse.mkdir(options.out);
     }
 
     await generateIndex(options);
@@ -53,21 +35,12 @@ async function main(options) {
 
 if (require.main === module) {
   const argv = yargs
-    .usage("Build JSX components from SVG's.\nUsage: $0")
-    .demand('output-dir')
-    .describe('output-dir', 'Directory to output jsx components')
-    .demand('svg-dir')
-    .describe('svg-dir', 'SVG directory')
-    .describe('glob', 'Glob to match inside of --svg-dir. Default **/*.svg')
-    .describe(
-      'rename-filter',
-      `Path to JS module used to rename destination filename and path.
-        Default: ${RENAME_FILTER_DEFAULT}`,
-    ).argv;
+    .usage('Create index file for icon components.\nUsage: $0')
+    .demand('out')
+    .describe('out', 'Directory for the icon components').argv;
   main(argv);
 }
 
 export default {
-  getComponentName,
   main,
 };

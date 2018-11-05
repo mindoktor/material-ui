@@ -3,9 +3,8 @@
   "main": "src/index.js",
   "scripts": {
     "preconvert": "rimraf src/icons",
-    "convert": "npx @svgr/cli -d src/icons src/images",
-    "postconvert": "cd ../../ && babel-node --config-file ./babel.config.js packages/docly-icons/convert.js --output-dir packages/docly-icons/src/icons --svg-dir packages/docly-icons/src/images",
-    "src:icons": "rimraf src/icons && cd ../../ && babel-node --config-file ./babel.config.js packages/docly-icons/builder.js --output-dir packages/docly-icons/src/icons --svg-dir packages/docly-icons/src/images"
+    "convert": "svgr -d src/icons src/images && yarn convert:toc",
+    "convert:toc": "cd ../../ && babel-node --config-file ./babel.config.js packages/docly-icons/convert.js --out packages/docly-icons/src/icons"
   },
   "private": true,
   "author": "Docly Healthcare AB",
@@ -21,15 +20,10 @@
   },
   "dependencies": {
     "@babel/runtime": "7.1.2",
-    "@svgr/core": "^4.0.0",
-    "recompose": "0.28.0 - 0.30.0"
+    "@svgr/cli": "^4.0.0"
   },
   "devDependencies": {
     "fs-extra": "^7.0.0",
-    "mkdirp": "^0.5.0",
-    "mustache": "^3.0.0",
-    "svgo": "^1.0.5",
-    "temp": "^0.8.3",
     "yargs": "^12.0.0"
   },
   "publishConfig": {
