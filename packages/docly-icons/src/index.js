@@ -1,142 +1,87 @@
-/* eslint-disable global-require */
-import React from 'react';
-import AdultPregnancy from './icons/AdultPregnancy';
-import Akne from './icons/Akne';
-import Allergi from './icons/Allergi';
-import Andningsbesvar from './icons/Andningsbesvar';
-import BarnAkne from './icons/BarnAkne';
-import BarnBorrelia from './icons/BarnBorrelia';
-import BarnDiarreOchKrakningar from './icons/BarnDiarreOchKrakningar';
-import BarnEksem from './icons/BarnEksem';
-import BarnForstoppning from './icons/BarnForstoppning';
-import BarnInsektsbett from './icons/BarnInsektsbett';
-import BarnKladaIRumpan from './icons/BarnKladaIRumpan';
-import BarnOgoninflammation from './icons/BarnOgoninflammation';
-import BarnOntIHalsen from './icons/BarnOntIHalsen';
-import BarnOvrigaBesvar from './icons/BarnOvrigaBesvar';
-import BarnVattkoppor from './icons/BarnVattkoppor';
-import Bihalebesvar from './icons/Bihalebesvar';
-import Borrelia from './icons/Borrelia';
-import Erektionsbesvar from './icons/Erektionsbesvar';
-import Fodelsemarke from './icons/Fodelsemarke';
-import ForskjutaMens from './icons/ForskjutaMens';
-import Fortidigutlosning from './icons/Fortidigutlosning';
-import Fotbesvar from './icons/Fotbesvar';
-import Handbesvar from './icons/Handbesvar';
-import Haravfall from './icons/Haravfall';
-import Herpes from './icons/Herpes';
-import Hosta from './icons/Hosta';
-import Hudbesvar from './icons/Hudbesvar';
-import Huvudvark from './icons/Huvudvark';
-import IllaluktandeFlytningar from './icons/IllaluktandeFlytningar';
-import Infektioner from './icons/Infektioner';
-import Insektsbett from './icons/Insektsbett';
-import KladaIUnderlivet from './icons/KladaIUnderlivet';
-import Klamydia from './icons/Klamydia';
-import Klimakteriebesvar from './icons/Klimakteriebesvar';
-import Ledbesvar from './icons/Ledbesvar';
-import MagbesvarNedre from './icons/MagbesvarNedre';
-import MagbesvarOvre from './icons/MagbesvarOvre';
-import Muskelochledbesvar from './icons/Muskelochledbesvar';
-import Nagelsvamp from './icons/Nagelsvamp';
-import Ogoninflammation from './icons/Ogoninflammation';
-import OntIHalsen from './icons/OntIHalsen';
-import Oronnasahals from './icons/Oronnasahals';
-import OvrigaBesvar from './icons/OvrigaBesvar';
-import Placeholder from './icons/Placeholder';
-import PremensBesvar from './icons/PremensBesvar';
-import Preventivmedel from './icons/Preventivmedel';
-import Receptfornyelse from './icons/Receptfornyelse';
-import Ryggont from './icons/Ryggont';
-import Somnsvarigheter from './icons/Somnsvarigheter';
-import StressOroDepression from './icons/StressOroDepression';
-import Thyroid from './icons/Thyroid';
-import Urinvagsbesvar from './icons/Urinvagsbesvar';
-import VartorIUnderlivet from './icons/VartorIUnderlivet';
+import * as icons from './icons';
 
 export const iconsByEntrywayId = {
-  1: OvrigaBesvar,
-  2: Urinvagsbesvar,
-  3: OntIHalsen,
-  4: Somnsvarigheter,
-  // psykolog
-  102: Somnsvarigheter,
-  5: Bihalebesvar,
-  6: MagbesvarOvre,
-  7: Receptfornyelse,
-  8: Hudbesvar,
-  9: Fodelsemarke,
-  10: MagbesvarNedre,
-  11: Huvudvark,
-  12: Hosta,
-  13: Ryggont,
-  14: Erektionsbesvar,
-  15: Ledbesvar,
-  16: Ogoninflammation,
-  17: Borrelia,
-  18: Preventivmedel,
-  19: StressOroDepression,
-  20: Allergi, // allergy B2B
-  21: Allergi, // allergy B2C
-  22: BarnEksem,
-  23: BarnForstoppning,
-  24: BarnOntIHalsen,
-  25: BarnDiarreOchKrakningar,
+  1: icons.OvrigaBesvar,
+  2: icons.Urinvagsbesvar,
+  3: icons.OntIHalsen,
+  4: icons.Somnsvarigheter,
+  102: icons.Somnsvarigheter, // psykolog
+  5: icons.Bihalebesvar,
+  6: icons.MagbesvarOvre,
+  7: icons.Receptfornyelse,
+  8: icons.Hudbesvar,
+  9: icons.Fodelsemarke,
+  10: icons.MagbesvarNedre,
+  11: icons.Huvudvark,
+  12: icons.Hosta,
+  13: icons.Ryggont,
+  14: icons.Erektionsbesvar,
+  15: icons.Ledbesvar,
+  16: icons.Ogoninflammation,
+  17: icons.Borrelia,
+  18: icons.Preventivmedel,
+  19: icons.StressOroDepression,
+  20: icons.Allergi, // allergy B2B
+  21: icons.Allergi, // allergy B2C
+  22: icons.BarnEksem,
+  23: icons.BarnForstoppning,
+  24: icons.BarnOntIHalsen,
+  25: icons.BarnDiarreOchKrakningar,
   26: undefined, // deprecated mental health
   27: undefined, // general health
   28: undefined, // physio therapi
-  29: ForskjutaMens,
-  30: Urinvagsbesvar, // uti youth
-  31: OntIHalsen, // tonsillitis youth
-  32: Bihalebesvar, // sinusitisYoth
-  33: MagbesvarOvre, // gastricProblemsUpperYouth
-  34: Hudbesvar, // rashYouth
-  35: Fodelsemarke, // birthmarkSkinTumorYouth
-  36: MagbesvarNedre, // gastricProblemsLowerYouth
-  37: Huvudvark, // headacheYouth
-  38: Hosta, // coughYouth
-  39: Ogoninflammation, // conjunctivitisYouth
-  40: Borrelia, // borreliaYouth
-  41: Allergi, // allergyYouth
-  42: BarnVattkoppor,
-  43: BarnOgoninflammation,
-  44: Akne,
-  45: Klamydia,
-  46: Muskelochledbesvar,
-  47: Herpes,
-  48: Receptfornyelse, // renewalApoteket
-  49: Preventivmedel, // anticonceptionApoteket
-  50: BarnBorrelia,
-  51: BarnAkne,
-  // 52: require('./images/ic_revisit.svg'),
-  // 53: require('./images/ic_revisit.svg'), // revisit under 18
-  54: BarnKladaIRumpan,
-  55: IllaluktandeFlytningar,
-  56: Nagelsvamp,
-  57: BarnInsektsbett,
-  58: KladaIUnderlivet,
-  59: VartorIUnderlivet,
-  60: Insektsbett,
-  61: PremensBesvar,
-  62: Klimakteriebesvar,
-  63: Haravfall,
-  64: BarnOvrigaBesvar,
-  65: Fortidigutlosning,
-  66: Muskelochledbesvar, // physio
-  67: Muskelochledbesvar, // physioRevisitCaregiver
+  29: icons.ForskjutaMens,
+  30: icons.Urinvagsbesvar, // uti youth
+  31: icons.OntIHalsen, // tonsillitis youth
+  32: icons.Bihalebesvar, // sinusitisYoth
+  33: icons.MagbesvarOvre, // gastricProblemsUpperYouth
+  34: icons.Hudbesvar, // rashYouth
+  35: icons.Fodelsemarke, // birthmarkSkinTumorYouth
+  36: icons.MagbesvarNedre, // gastricProblemsLowerYouth
+  37: icons.Huvudvark, // headacheYouth
+  38: icons.Hosta, // coughYouth
+  39: icons.Ogoninflammation, // conjunctivitisYouth
+  40: icons.Borrelia, // borreliaYouth
+  41: icons.Allergi, // allergyYouth
+  42: icons.BarnVattkoppor,
+  43: icons.BarnOgoninflammation,
+  44: icons.Akne,
+  45: icons.Klamydia,
+  46: icons.Muskelochledbesvar,
+  47: icons.Herpes,
+  48: icons.Receptfornyelse, // renewalApoteket
+  49: icons.Preventivmedel, // anticonceptionApoteket
+  50: icons.BarnBorrelia,
+  51: icons.BarnAkne,
+  // 52: icons.require('./images/ic_revisit.svg'),
+  // 53: icons.require('./images/ic_revisit.svg'), // revisit under 18
+  54: icons.BarnKladaIRumpan,
+  55: icons.IllaluktandeFlytningar,
+  56: icons.Nagelsvamp,
+  57: icons.BarnInsektsbett,
+  58: icons.KladaIUnderlivet,
+  59: icons.VartorIUnderlivet,
+  60: icons.Insektsbett,
+  61: icons.PremensBesvar,
+  62: icons.Klimakteriebesvar,
+  63: icons.Haravfall,
+  64: icons.BarnOvrigaBesvar,
+  65: icons.Fortidigutlosning,
+  66: icons.Muskelochledbesvar, // physio
+  67: icons.Muskelochledbesvar, // physioRevisitCaregiver
   68: undefined, // invitationFromPhysioToDoctor
-  69: Muskelochledbesvar, // invitationFromDoctorToPhysio
-  70: Muskelochledbesvar, // invitationFromDoctorToPhysioFull
-  71: Muskelochledbesvar, // physioRevisitPatient
-  73: Thyroid, // thyroid
-  103: AdultPregnancy,
+  69: icons.Muskelochledbesvar, // invitationFromDoctorToPhysio
+  70: icons.Muskelochledbesvar, // invitationFromDoctorToPhysioFull
+  71: icons.Muskelochledbesvar, // physioRevisitPatient
+  73: icons.Thyroid, // thyroid
+  103: icons.AdultPregnancy,
 };
 
 export function getIconByEntrywayId(id) {
   if (iconsByEntrywayId[id]) {
     return iconsByEntrywayId[id];
   }
-  return Placeholder;
+  return icons.Placeholder;
 }
 
 export default getIconByEntrywayId;

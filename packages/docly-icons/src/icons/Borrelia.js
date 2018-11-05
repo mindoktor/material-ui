@@ -1,6 +1,86 @@
 import React from 'react';
-import createSvgIcon from '../utils/createSvgIcon';
 
-export default createSvgIcon(
-  <React.Fragment><use fill="#283D46" transform="matrix(1 0 0 1 39.244 30)" xlinkHref="#path0_fill" /><use fill="#283D46" transform="translate(6 30)" xlinkHref="#path0_fill" /><use fill="#283D46" transform="translate(12.242 8)" xlinkHref="#path1_fill" /><use fill="#283D46" transform="matrix(-1 0 0 1 43.758 8)" xlinkHref="#path1_fill" /><use fill="#283D46" transform="translate(22.636 7)" xlinkHref="#path2_fill" /><use fill="#283D46" transform="translate(15.497 16.664)" xlinkHref="#path3_fill" /><use fill="#283D46" transform="translate(17.888 11)" xlinkHref="#path4_fill" /><use fill="#283D46" transform="translate(5.531 10.952)" xlinkHref="#path5_fill" /><use fill="#283D46" transform="matrix(1 0 0 -1 7.353 48)" xlinkHref="#path6_fill" /><use fill="#283D46" transform="rotate(180 24.406 24)" xlinkHref="#path7_fill" /><use fill="#283D46" transform="matrix(-1 0 0 1 50.12 10.952)" xlinkHref="#path8_fill" /><use fill="#FF383B" transform="translate(21.644 29)" xlinkHref="#path9_fill" /><defs><path id="path0_fill" fillRule="evenodd" d="M10.7556 2H0V0h10.7556v2z" /><path id="path1_fill" fillRule="evenodd" d="M1.40056 6.65151C.39887 4.90465.00000298 2.70496 0 0h2c0 2.53923.3803 4.33953 1.13555 5.65663.73838 1.28766 1.89791 2.22162 3.69198 2.90968l-.71618 1.86739c-2.11704-.81195-3.69222-2.0059-4.71079-3.78219z" /><path id="path2_fill" d="M8.5636 4.37131C8.10559 2.97281 6.82063 2 5.36404 2c-1.45665 0-2.74163.97287-3.1996 2.37146C1.3994 4.55463.673981 4.80167 0 5.10397.198456 2.25125 2.52419 0 5.36404 0 8.2038 0 10.5295 2.2511 10.7281 5.10367c-.674-.30225-1.39946-.54926-2.1645-.73236z" /><path id="path3_fill" fillRule="evenodd" d="M21.104 2.1096c-2.0616.68673-5.361 1.54832-8.6007 1.56609-3.23964-.01777-6.53911-.87936-8.60073-1.56609l-1.8181 14.4105c-.79127 6.2717 4.09741 11.816 10.41883 11.816 6.3214 0 11.2101-5.5443 10.4188-11.816L21.104 2.1096zM4.18589.0934522C3.20454-.248132 2.10472.381706 1.97465 1.41263L.100197 16.2698C-.841769 23.736 4.97797 30.3361 12.5033 30.3361c7.5253 0 13.3451-6.6001 12.4031-14.0663L23.032 1.41263C22.9019.381707 21.8021-.248132 20.8207.093452c-1.9634.68343-5.1481 1.582238-8.3174 1.582238-3.16928 0-6.35396-.898807-8.31741-1.5822378z" /><path id="path4_fill" d="M18.0079 5.90097c-.3497-.74084-.9502-1.45694-1.8158-2.08929C14.7115 2.7301 12.5685 2 10.1122 2c-2.45622 0-4.59929.7301-6.07982 1.81168-.86565.63235-1.4661 1.34845-1.81584 2.08929-.14607-.04864-.28679-.09662-.42172-.14358C1.14227 5.53024.437363 5.73264 0 6.19684.844406 2.67587 5.05055 0 10.1122 0c5.0617 0 9.2679 2.6759 10.1123 6.19687-.4374-.4642-1.1423-.66663-1.7949-.43948-.1349.04696-.2756.09494-.4217.14358z" /><path id="path5_fill" fillRule="evenodd" d="M3.01612 9.10074C.948982 6.18088-.22513 2.58107.0360694 0L2.02591.201368C1.82877 2.14937 2.757 5.27341 4.64846 7.94512 6.52941 10.602 9.17189 12.5484 12.2023 12.5484v2c-3.93618 0-7.10854-2.513-9.18618-5.44766z" /><path id="path6_fill" fillRule="evenodd" d="M2.48139 7.59593C.816789 5.54057.00000304 2.80507 0 0h2c0 2.43911.7126 4.70362 2.03561 6.3372C5.33942 7.94709 7.2767 9 9.89167 9v2c-3.21794 0-5.72649-1.325-7.41028-3.40407z" /><path id="path7_fill" fillRule="evenodd" d="M2.5723 7.60625C.864946 5.5547.0000031 2.81744 0 0h2c0 2.42674.74689 4.68948 2.10958 6.32689C5.45573 7.94441 7.43885 9 10.0566 9v2c-3.21524 0-5.76039-1.32231-7.4843-3.39375z" /><path id="path8_fill" fillRule="evenodd" d="M2.57137 9.0575C.711237 6.1167-.214383 2.53389.0420417 0L2.03188.201368C1.82997 2.19655 2.58493 5.33758 4.26163 7.98836c1.66882 2.63834 4.09443 4.56004 7.10317 4.56004v2c-3.95794 0-6.92542-2.5377-8.79343-5.4909z" /><path id="path9_fill" fillRule="evenodd" d="M6.35556 11c2.36337 0 4.35554-1.97211 4.35554-4.5S8.71893 2 6.35556 2C3.99218 2 2 3.97211 2 6.5S3.99218 11 6.35556 11zm0 2c3.51007 0 6.35554-2.9101 6.35554-6.5 0-3.58985-2.84547-6.5-6.35554-6.5C2.84548 0 0 2.91015 0 6.5 0 10.0899 2.84548 13 6.35556 13z" /></defs></React.Fragment>
-, 'Borrelia');
+const SvgBorrelia = props => (
+  <svg viewBox="0 0 56 56" {...props}>
+    <use
+      xlinkHref="#borrelia_svg__path0_fill"
+      transform="matrix(1 0 0 1 39.244 30)"
+      fill="#283D46"
+    />
+    <use xlinkHref="#borrelia_svg__path0_fill" transform="translate(6 30)" fill="#283D46" />
+    <use xlinkHref="#borrelia_svg__path1_fill" transform="translate(12.242 8)" fill="#283D46" />
+    <use
+      xlinkHref="#borrelia_svg__path1_fill"
+      transform="matrix(-1 0 0 1 43.758 8)"
+      fill="#283D46"
+    />
+    <use xlinkHref="#borrelia_svg__path2_fill" transform="translate(22.636 7)" fill="#283D46" />
+    <use
+      xlinkHref="#borrelia_svg__path3_fill"
+      transform="translate(15.497 16.664)"
+      fill="#283D46"
+    />
+    <use xlinkHref="#borrelia_svg__path4_fill" transform="translate(17.888 11)" fill="#283D46" />
+    <use xlinkHref="#borrelia_svg__path5_fill" transform="translate(5.531 10.952)" fill="#283D46" />
+    <use
+      xlinkHref="#borrelia_svg__path6_fill"
+      transform="matrix(1 0 0 -1 7.353 48)"
+      fill="#283D46"
+    />
+    <use xlinkHref="#borrelia_svg__path7_fill" transform="rotate(180 24.406 24)" fill="#283D46" />
+    <use
+      xlinkHref="#borrelia_svg__path8_fill"
+      transform="matrix(-1 0 0 1 50.12 10.952)"
+      fill="#283D46"
+    />
+    <use xlinkHref="#borrelia_svg__path9_fill" transform="translate(21.644 29)" fill="#FF383B" />
+    <defs>
+      <path id="borrelia_svg__path0_fill" fillRule="evenodd" d="M10.756 2H0V0h10.756v2z" />
+      <path
+        id="borrelia_svg__path1_fill"
+        fillRule="evenodd"
+        d="M1.4 6.652C.4 4.905 0 2.705 0 0h2c0 2.54.38 4.34 1.136 5.657.738 1.287 1.897 2.221 3.692 2.91l-.717 1.867c-2.117-.812-3.692-2.006-4.71-3.782z"
+      />
+      <path
+        id="borrelia_svg__path2_fill"
+        d="M8.564 4.371C8.106 2.973 6.82 2 5.364 2s-2.742.973-3.2 2.371c-.765.184-1.49.43-2.164.733C.198 2.251 2.524 0 5.364 0s5.166 2.251 5.364 5.104c-.674-.303-1.4-.55-2.164-.733z"
+      />
+      <path
+        id="borrelia_svg__path3_fill"
+        fillRule="evenodd"
+        d="M21.104 2.11c-2.062.686-5.361 1.548-8.6 1.566-3.24-.018-6.54-.88-8.601-1.566L2.084 16.52c-.79 6.272 4.098 11.816 10.42 11.816 6.32 0 11.21-5.544 10.418-11.816L21.104 2.11zM4.186.093c-.981-.341-2.081.289-2.211 1.32L.1 16.27c-.942 7.466 4.878 14.066 12.403 14.066 7.526 0 13.345-6.6 12.403-14.066L23.032 1.413c-.13-1.031-1.23-1.661-2.211-1.32-1.964.684-5.148 1.583-8.318 1.583-3.169 0-6.354-.9-8.317-1.583z"
+      />
+      <path
+        id="borrelia_svg__path4_fill"
+        d="M18.008 5.901c-.35-.74-.95-1.457-1.816-2.09C14.712 2.732 12.57 2 10.112 2c-2.456 0-4.6.73-6.08 1.812-.865.632-1.466 1.348-1.815 2.089a33.066 33.066 0 0 1-.422-.144A1.71 1.71 0 0 0 0 6.197C.844 2.676 5.05 0 10.112 0s9.268 2.676 10.112 6.197a1.71 1.71 0 0 0-1.794-.44l-.422.144z"
+      />
+      <path
+        id="borrelia_svg__path5_fill"
+        fillRule="evenodd"
+        d="M3.016 9.1C.95 6.18-.225 2.582.036 0l1.99.201c-.197 1.948.731 5.072 2.622 7.744 1.881 2.657 4.524 4.603 7.554 4.603v2c-3.936 0-7.108-2.513-9.186-5.447z"
+      />
+      <path
+        id="borrelia_svg__path6_fill"
+        fillRule="evenodd"
+        d="M2.481 7.596C.817 5.54 0 2.806 0 0h2c0 2.44.713 4.704 2.036 6.337C5.339 7.947 7.276 9 9.892 9v2c-3.218 0-5.727-1.325-7.41-3.404z"
+      />
+      <path
+        id="borrelia_svg__path7_fill"
+        fillRule="evenodd"
+        d="M2.572 7.606C.865 5.555 0 2.817 0 0h2c0 2.427.747 4.69 2.11 6.327C5.456 7.944 7.439 9 10.057 9v2c-3.216 0-5.76-1.322-7.485-3.394z"
+      />
+      <path
+        id="borrelia_svg__path8_fill"
+        fillRule="evenodd"
+        d="M2.571 9.057C.711 6.117-.214 2.534.042 0l1.99.201c-.202 1.996.553 5.137 2.23 7.787 1.668 2.639 4.094 4.56 7.103 4.56v2c-3.958 0-6.926-2.537-8.794-5.49z"
+      />
+      <path
+        id="borrelia_svg__path9_fill"
+        fillRule="evenodd"
+        d="M6.356 11c2.363 0 4.355-1.972 4.355-4.5S8.72 2 6.356 2C3.992 2 2 3.972 2 6.5S3.992 11 6.356 11zm0 2c3.51 0 6.355-2.91 6.355-6.5S9.866 0 6.356 0C2.846 0 0 2.91 0 6.5S2.845 13 6.356 13z"
+      />
+    </defs>
+  </svg>
+);
+
+export default SvgBorrelia;

@@ -1,6 +1,53 @@
 import React from 'react';
-import createSvgIcon from '../utils/createSvgIcon';
 
-export default createSvgIcon(
-  <React.Fragment><g transform="translate(214 258)"><g><use fill="#2F424A" transform="translate(-197.06 -255.997)" xlinkHref="#path0_fill" /><use fill="#FF383B" transform="translate(-192.5 -220.5)" xlinkHref="#path1_fill" /><use fill="#2F424A" transform="matrix(1 0 0 -1 -182.186 -233.536)" xlinkHref="#path2_fill" /><use fill="#FF383B" transform="matrix(-1 0 0 1 -195 -213)" xlinkHref="#path3_fill" /></g></g><defs><path id="path0_fill" fillRule="evenodd" d="M.62338 2.19444c-.171373.01056-.338998.02088-.502624.03078L0 .228866C.132219.220869.267548.212586.405832.204121 3.2701.0287954 7.40203-.224125 11.4235.386531c4.2251.647969 8.5366 2.290439 11.1318 6.204529 1.3234 1.9958 1.9341 4.98604 2.2318 7.33554.1512 1.1967.2283 2.2926.2659 3.0684.0189.3917.0286.7145.0333.9324.001.0476.0018.0911.0025.1298l5.1581 11.2323c.5253 1.1438-.1239 2.4826-1.3472 2.7786l-3.8086.9215v2.2498l-1.0307 2v2.2575c0 1.1685-.3453 2.8006-1.4277 4.1636-1.1165 1.4058-2.9354 2.4197-5.6492 2.4197h-1.7077v4.9167h-2v-6.9167h3.7077c2.16 0 3.3796-.7778 4.083-1.6636.7376-.9287.9939-2.0882.9939-2.9197v-2.7425l1.0307-2v-3.3386l5.3383-1.2916-5.3383-11.6245v-.2354l-.0005-.0588c-.0005-.0544-.0016-.1318-.0038-.2348-.0046-.2097-.0134-.5058-.0315-.879-.0364-.7543-.1074-1.7727-.2524-2.9137-.2946-2.3259-.8685-4.90433-1.9144-6.4817-2.1432-3.23224-5.7856-4.7221-9.7682-5.33288-3.76547-.5835-7.64882-.34436-10.49692-.16898z" /><path id="path1_fill" fillRule="evenodd" d="M5.99999 2C3.79087 2 2 3.79086 2 6v9.5H.00000322L0 6c.0000056-3.3137 2.68629-6 5.99999-6H15v2H5.99999z" /><path id="path2_fill" fillRule="evenodd" d="M3.8394 2.46424L0 .928477.371391 0 5.37139 2v.92848l-4.999999 2L0 4l3.8394-1.53576z" /><path id="path3_fill" d="M0 3.5L9 0v7L0 3.5z" /></defs></React.Fragment>
-, 'OntIHalsen');
+const SvgOntIHalsen = props => (
+  <svg viewBox="0 0 56 56" {...props}>
+    <g transform="translate(214 258)">
+      <clipPath id="ont_i_halsen_svg__a" clipRule="evenodd">
+        <path d="M-214-258h56v56h-56v-56z" fill="#FFF" />
+      </clipPath>
+      <g clipPath="url(#ont_i_halsen_svg__a)">
+        <use
+          xlinkHref="#ont_i_halsen_svg__path0_fill"
+          transform="translate(-197.06 -255.997)"
+          fill="#2F424A"
+        />
+        <use
+          xlinkHref="#ont_i_halsen_svg__path1_fill"
+          transform="translate(-192.5 -220.5)"
+          fill="#FF383B"
+        />
+        <use
+          xlinkHref="#ont_i_halsen_svg__path2_fill"
+          transform="matrix(1 0 0 -1 -182.186 -233.536)"
+          fill="#2F424A"
+        />
+        <use
+          xlinkHref="#ont_i_halsen_svg__path3_fill"
+          transform="matrix(-1 0 0 1 -195 -213)"
+          fill="#FF383B"
+        />
+      </g>
+    </g>
+    <defs>
+      <path
+        id="ont_i_halsen_svg__path0_fill"
+        fillRule="evenodd"
+        d="M.623 2.194l-.502.031L0 .23.406.204C3.27.03 7.402-.224 11.424.387c4.225.647 8.536 2.29 11.131 6.204 1.324 1.996 1.934 4.986 2.232 7.336a40.716 40.716 0 0 1 .302 4.13l5.158 11.233a2 2 0 0 1-1.347 2.778l-3.809.922v2.25l-1.03 2v2.257c0 1.168-.346 2.8-1.428 4.163-1.117 1.406-2.936 2.42-5.65 2.42h-1.707v4.917h-2V44.08h3.707c2.16 0 3.38-.778 4.084-1.663.737-.93.993-2.089.993-2.92v-2.743l1.031-2v-3.338l5.338-1.292L23.091 18.5V18.206l-.004-.235a37.73 37.73 0 0 0-.284-3.793c-.295-2.326-.869-4.904-1.915-6.482-2.143-3.232-5.785-4.722-9.768-5.333C7.355 1.78 3.471 2.02.623 2.194z"
+      />
+      <path
+        id="ont_i_halsen_svg__path1_fill"
+        fillRule="evenodd"
+        d="M6 2a4 4 0 0 0-4 4v9.5H0V6a6 6 0 0 1 6-6h9v2H6z"
+      />
+      <path
+        id="ont_i_halsen_svg__path2_fill"
+        fillRule="evenodd"
+        d="M3.84 2.464L0 .928.371 0l5 2v.928l-5 2L0 4l3.84-1.536z"
+      />
+      <path id="ont_i_halsen_svg__path3_fill" d="M0 3.5L9 0v7L0 3.5z" />
+    </defs>
+  </svg>
+);
+
+export default SvgOntIHalsen;

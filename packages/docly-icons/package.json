@@ -2,6 +2,9 @@
   "name": "@docly/guide-icons",
   "main": "src/index.js",
   "scripts": {
+    "preconvert": "rimraf src/icons",
+    "convert": "npx @svgr/cli -d src/icons src/images",
+    "postconvert": "cd ../../ && babel-node --config-file ./babel.config.js packages/docly-icons/convert.js --output-dir packages/docly-icons/src/icons --svg-dir packages/docly-icons/src/images",
     "src:icons": "rimraf src/icons && cd ../../ && babel-node --config-file ./babel.config.js packages/docly-icons/builder.js --output-dir packages/docly-icons/src/icons --svg-dir packages/docly-icons/src/images"
   },
   "private": true,
@@ -18,6 +21,7 @@
   },
   "dependencies": {
     "@babel/runtime": "7.1.2",
+    "@svgr/core": "^4.0.0",
     "recompose": "0.28.0 - 0.30.0"
   },
   "devDependencies": {

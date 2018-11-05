@@ -1,6 +1,86 @@
 import React from 'react';
-import createSvgIcon from '../utils/createSvgIcon';
 
-export default createSvgIcon(
-  <React.Fragment><use fill="#2F424A" transform="translate(5)" xlinkHref="#path0_fill" /><g fill="#283D46" transform="translate(10 5)"><use xlinkHref="#path1_fill" /><use xlinkHref="#path2_fill" /><use xlinkHref="#path3_fill" /><use xlinkHref="#path4_fill" /><use xlinkHref="#path5_fill" /><use xlinkHref="#path6_fill" /><use xlinkHref="#path7_fill" /><use xlinkHref="#path8_fill" /><use xlinkHref="#path9_fill" /><use xlinkHref="#path10_fill" /><use xlinkHref="#path11_fill" /><use xlinkHref="#path12_fill" /><use xlinkHref="#path13_fill" /><use xlinkHref="#path14_fill" /><use xlinkHref="#path15_fill" /><use xlinkHref="#path16_fill" /><use xlinkHref="#path17_fill" /><use xlinkHref="#path18_fill" /><use xlinkHref="#path19_fill" /><use xlinkHref="#path20_fill" /><use xlinkHref="#path21_fill" /></g><g fill="#FF383B" transform="translate(31 5)"><use xlinkHref="#path22_fill" /><use xlinkHref="#path23_fill" /><use xlinkHref="#path24_fill" /><use xlinkHref="#path25_fill" /><use xlinkHref="#path26_fill" /><use xlinkHref="#path27_fill" /><use xlinkHref="#path28_fill" /></g><use fill="#283D46" transform="translate(45.0909 38)" xlinkHref="#path29_fill" /><defs><path id="path0_fill" fillRule="evenodd" d="M31 2H4c-1.10457 0-2 .89543-2 2v48c0 1.1046.89543 2 2 2h27c1.1046 0 2-.8954 2-2V4c0-1.10457-.8954-2-2-2zM4 0C1.79086 0 0 1.79086 0 4v48c0 2.2091 1.79086 4 4 4h27c2.2091 0 4-1.7909 4-4V4c0-2.20914-1.7909-4-4-4H4z" /><path id="path1_fill" d="M4 2c0 1.10457-.89543 2-2 2-1.104568 0-2-.89543-2-2C0 .895432.895432 0 2 0c1.10457 0 2 .895432 2 2z" /><path id="path2_fill" d="M11 2c0 1.10457-.8954 2-2 2-1.10457 0-2-.89543-2-2 0-1.104568.89543-2 2-2 1.1046 0 2 .895432 2 2z" /><path id="path3_fill" d="M16 4c1.1046 0 2-.89543 2-2 0-1.104568-.8954-2-2-2s-2 .895432-2 2c0 1.10457.8954 2 2 2z" /><path id="path4_fill" d="M4 9c0 1.1046-.89543 2-2 2-1.104568 0-2-.8954-2-2 0-1.10457.895432-2 2-2 1.10457 0 2 .89543 2 2z" /><path id="path5_fill" d="M9 11c1.1046 0 2-.8954 2-2 0-1.10457-.8954-2-2-2-1.10457 0-2 .89543-2 2 0 1.1046.89543 2 2 2z" /><path id="path6_fill" d="M18 9c0 1.1046-.8954 2-2 2s-2-.8954-2-2c0-1.10457.8954-2 2-2s2 .89543 2 2z" /><path id="path7_fill" d="M2 18c1.10457 0 2-.8954 2-2s-.89543-2-2-2c-1.104568 0-2 .8954-2 2s.895432 2 2 2z" /><path id="path8_fill" d="M11 16c0 1.1046-.8954 2-2 2-1.10457 0-2-.8954-2-2s.89543-2 2-2c1.1046 0 2 .8954 2 2z" /><path id="path9_fill" d="M16 18c1.1046 0 2-.8954 2-2s-.8954-2-2-2-2 .8954-2 2 .8954 2 2 2z" /><path id="path10_fill" d="M4 23c0 1.1046-.89543 2-2 2-1.104568 0-2-.8954-2-2s.895432-2 2-2c1.10457 0 2 .8954 2 2z" /><path id="path11_fill" d="M9 25c1.1046 0 2-.8954 2-2s-.8954-2-2-2c-1.10457 0-2 .8954-2 2s.89543 2 2 2z" /><path id="path12_fill" d="M18 23c0 1.1046-.8954 2-2 2s-2-.8954-2-2 .8954-2 2-2 2 .8954 2 2z" /><path id="path13_fill" d="M2 32c1.10457 0 2-.8954 2-2s-.89543-2-2-2c-1.104568 0-2 .8954-2 2s.895432 2 2 2z" /><path id="path14_fill" d="M11 30c0 1.1046-.8954 2-2 2-1.10457 0-2-.8954-2-2s.89543-2 2-2c1.1046 0 2 .8954 2 2z" /><path id="path15_fill" d="M16 32c1.1046 0 2-.8954 2-2s-.8954-2-2-2-2 .8954-2 2 .8954 2 2 2z" /><path id="path16_fill" d="M4 37c0 1.1046-.89543 2-2 2-1.104568 0-2-.8954-2-2s.895432-2 2-2c1.10457 0 2 .8954 2 2z" /><path id="path17_fill" d="M9 39c1.1046 0 2-.8954 2-2s-.8954-2-2-2c-1.10457 0-2 .8954-2 2s.89543 2 2 2z" /><path id="path18_fill" d="M18 37c0 1.1046-.8954 2-2 2s-2-.8954-2-2 .8954-2 2-2 2 .8954 2 2z" /><path id="path19_fill" d="M2 46c1.10457 0 2-.8954 2-2s-.89543-2-2-2c-1.104568 0-2 .8954-2 2s.895432 2 2 2z" /><path id="path20_fill" d="M11 44c0 1.1046-.8954 2-2 2-1.10457 0-2-.8954-2-2s.89543-2 2-2c1.1046 0 2 .8954 2 2z" /><path id="path21_fill" d="M16 46c1.1046 0 2-.8954 2-2s-.8954-2-2-2-2 .8954-2 2 .8954 2 2 2z" /><path id="path22_fill" d="M4 2c0 1.10457-.89543 2-2 2-1.104568 0-2-.89543-2-2C0 .895432.895432 0 2 0c1.10457 0 2 .895432 2 2z" /><path id="path23_fill" d="M4 9c0 1.1046-.89543 2-2 2-1.104568 0-2-.8954-2-2 0-1.10457.895432-2 2-2 1.10457 0 2 .89543 2 2z" /><path id="path24_fill" d="M2 18c1.10457 0 2-.8954 2-2s-.89543-2-2-2c-1.104568 0-2 .8954-2 2s.895432 2 2 2z" /><path id="path25_fill" d="M4 23c0 1.1046-.89543 2-2 2-1.104568 0-2-.8954-2-2s.895432-2 2-2c1.10457 0 2 .8954 2 2z" /><path id="path26_fill" d="M2 32c1.10457 0 2-.8954 2-2s-.89543-2-2-2c-1.104568 0-2 .8954-2 2s.895432 2 2 2z" /><path id="path27_fill" d="M4 37c0 1.1046-.89543 2-2 2-1.104568 0-2-.8954-2-2s.895432-2 2-2c1.10457 0 2 .8954 2 2z" /><path id="path28_fill" d="M2 46c1.10457 0 2-.8954 2-2s-.89543-2-2-2c-1.104568 0-2 .8954-2 2s.895432 2 2 2z" /><path id="path29_fill" fillRule="evenodd" d="M4.4545 10.8176C1.91965 10.3479 0 8.12541 0 5.45454 0 2.44208 2.44208 0 5.45454 0s5.45456 2.44208 5.45456 5.45454c0 2.6709-1.91971 4.89346-4.4546 5.36306v2.4958h2.5v2h-2.5V18h-2v-2.6866h-2.5v-2h2.5v-2.4958zM2 5.45454c0 1.9079 1.54665 3.45455 3.45454 3.45455s3.45455-1.54665 3.45455-3.45455C8.90909 3.54665 7.36243 2 5.45454 2 3.54665 2 2 3.54665 2 5.45454z" /></defs></React.Fragment>
-, 'Preventivmedel');
+const SvgPreventivmedel = props => (
+  <svg viewBox="0 0 57 56" {...props}>
+    <use xlinkHref="#preventivmedel_svg__path0_fill" transform="translate(5)" fill="#2F424A" />
+    <g transform="translate(10 5)" fill="#283D46">
+      <use xlinkHref="#preventivmedel_svg__path1_fill" />
+      <use xlinkHref="#preventivmedel_svg__path2_fill" />
+      <use xlinkHref="#preventivmedel_svg__path3_fill" />
+      <use xlinkHref="#preventivmedel_svg__path4_fill" />
+      <use xlinkHref="#preventivmedel_svg__path5_fill" />
+      <use xlinkHref="#preventivmedel_svg__path6_fill" />
+      <use xlinkHref="#preventivmedel_svg__path7_fill" />
+      <use xlinkHref="#preventivmedel_svg__path8_fill" />
+      <use xlinkHref="#preventivmedel_svg__path9_fill" />
+      <use xlinkHref="#preventivmedel_svg__path10_fill" />
+      <use xlinkHref="#preventivmedel_svg__path11_fill" />
+      <use xlinkHref="#preventivmedel_svg__path12_fill" />
+      <use xlinkHref="#preventivmedel_svg__path13_fill" />
+      <use xlinkHref="#preventivmedel_svg__path14_fill" />
+      <use xlinkHref="#preventivmedel_svg__path15_fill" />
+      <use xlinkHref="#preventivmedel_svg__path16_fill" />
+      <use xlinkHref="#preventivmedel_svg__path17_fill" />
+      <use xlinkHref="#preventivmedel_svg__path18_fill" />
+      <use xlinkHref="#preventivmedel_svg__path19_fill" />
+      <use xlinkHref="#preventivmedel_svg__path20_fill" />
+      <use xlinkHref="#preventivmedel_svg__path21_fill" />
+    </g>
+    <g transform="translate(31 5)" fill="#FF383B">
+      <use xlinkHref="#preventivmedel_svg__path22_fill" />
+      <use xlinkHref="#preventivmedel_svg__path23_fill" />
+      <use xlinkHref="#preventivmedel_svg__path24_fill" />
+      <use xlinkHref="#preventivmedel_svg__path25_fill" />
+      <use xlinkHref="#preventivmedel_svg__path26_fill" />
+      <use xlinkHref="#preventivmedel_svg__path27_fill" />
+      <use xlinkHref="#preventivmedel_svg__path28_fill" />
+    </g>
+    <use
+      xlinkHref="#preventivmedel_svg__path29_fill"
+      transform="translate(45.09 38)"
+      fill="#283D46"
+    />
+    <defs>
+      <path
+        id="preventivmedel_svg__path0_fill"
+        fillRule="evenodd"
+        d="M31 2H4a2 2 0 0 0-2 2v48a2 2 0 0 0 2 2h27a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM4 0a4 4 0 0 0-4 4v48a4 4 0 0 0 4 4h27a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4H4z"
+      />
+      <path id="preventivmedel_svg__path1_fill" d="M4 2a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" />
+      <path id="preventivmedel_svg__path2_fill" d="M11 2a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" />
+      <path id="preventivmedel_svg__path3_fill" d="M16 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+      <path id="preventivmedel_svg__path4_fill" d="M4 9a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" />
+      <path id="preventivmedel_svg__path5_fill" d="M9 11a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+      <path id="preventivmedel_svg__path6_fill" d="M18 9a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" />
+      <path id="preventivmedel_svg__path7_fill" d="M2 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+      <path id="preventivmedel_svg__path8_fill" d="M11 16a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" />
+      <path id="preventivmedel_svg__path9_fill" d="M16 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+      <path id="preventivmedel_svg__path10_fill" d="M4 23a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" />
+      <path id="preventivmedel_svg__path11_fill" d="M9 25a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+      <path id="preventivmedel_svg__path12_fill" d="M18 23a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" />
+      <path id="preventivmedel_svg__path13_fill" d="M2 32a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+      <path id="preventivmedel_svg__path14_fill" d="M11 30a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" />
+      <path id="preventivmedel_svg__path15_fill" d="M16 32a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+      <path id="preventivmedel_svg__path16_fill" d="M4 37a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" />
+      <path id="preventivmedel_svg__path17_fill" d="M9 39a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+      <path id="preventivmedel_svg__path18_fill" d="M18 37a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" />
+      <path id="preventivmedel_svg__path19_fill" d="M2 46a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+      <path id="preventivmedel_svg__path20_fill" d="M11 44a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" />
+      <path id="preventivmedel_svg__path21_fill" d="M16 46a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+      <path id="preventivmedel_svg__path22_fill" d="M4 2a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" />
+      <path id="preventivmedel_svg__path23_fill" d="M4 9a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" />
+      <path id="preventivmedel_svg__path24_fill" d="M2 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+      <path id="preventivmedel_svg__path25_fill" d="M4 23a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" />
+      <path id="preventivmedel_svg__path26_fill" d="M2 32a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+      <path id="preventivmedel_svg__path27_fill" d="M4 37a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" />
+      <path id="preventivmedel_svg__path28_fill" d="M2 46a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+      <path
+        id="preventivmedel_svg__path29_fill"
+        fillRule="evenodd"
+        d="M4.455 10.818A5.456 5.456 0 0 1 5.455 0a5.455 5.455 0 0 1 1 10.818v2.495h2.5v2h-2.5V18h-2v-2.687h-2.5v-2h2.5v-2.495zM2 5.455a3.455 3.455 0 1 0 6.91 0 3.455 3.455 0 0 0-6.91 0z"
+      />
+    </defs>
+  </svg>
+);
+
+export default SvgPreventivmedel;

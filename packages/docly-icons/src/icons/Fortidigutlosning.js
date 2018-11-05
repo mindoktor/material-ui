@@ -1,6 +1,46 @@
 import React from 'react';
-import createSvgIcon from '../utils/createSvgIcon';
 
-export default createSvgIcon(
-  <React.Fragment><g transform="translate(62 24)"><g><use fill="#283D46" transform="translate(-48.6342 -12.6154)" xlinkHref="#path0_fill" /><use fill="#283D46" transform="translate(-55 -20)" xlinkHref="#path1_fill" /></g><use fill="#283D46" transform="translate(-21 17)" xlinkHref="#path2_fill" /></g><defs><path id="path0_fill" d="M2.63422 0H0v5.0197c0 4.49236 3.64178 8.1341 8.13415 8.1341 4.49235 0 8.13415-3.64174 8.13415-8.1341V0H4.63422v5.61539c0 .55228-.44772 1-1 1-.55229 0-1-.44772-1-1V0z" /><path id="path1_fill" fillRule="evenodd" d="M0 0h29v2h-2v10.5c0 5.1616-3.1286 9.5926-7.5928 11.5C23.8715 25.9074 27 30.3384 27 35.5V46h2v2H0v-2h2V35.5c0-5.1616 3.12855-9.5926 7.59283-11.5C5.12855 22.0926 2 17.6617 2 12.5V2H0V0zm4 46h21V35.5c0-5.4617-4.1701-9.9494-9.5-10.453v-2.094c5.3299-.5036 9.5-4.9913 9.5-10.453V2H4v10.5c0 5.4617 4.17007 9.9494 9.5 10.453v2.094C8.17007 25.5506 4 30.0383 4 35.5V46z" /><path id="path2_fill" fillRule="evenodd" d="M13 6h2V0H9v2h2.6284L8.56458 5.06381c-.88221-.61334-1.95417-.9729-3.11005-.9729C2.44208 4.09091 0 6.53299 0 9.54547 0 12.5579 2.44208 15 5.45453 15c3.01245 0 5.45457-2.4421 5.45457-5.45453 0-1.13394-.346-2.18707-.93821-3.05957L13 3.45676V6zM8.90912 9.54547C8.90912 11.4533 7.36243 13 5.45453 13 3.54663 13 2 11.4533 2 9.54547c0-1.9079 1.54663-3.45456 3.45453-3.45456 1.9079 0 3.45459 1.54666 3.45459 3.45456z" /></defs></React.Fragment>
-, 'Fortidigutlosning');
+const SvgFortidigutlosning = props => (
+  <svg viewBox="0 0 56 56" {...props}>
+    <g transform="translate(62 24)">
+      <clipPath id="fortidigutlosning_svg__a" clipRule="evenodd">
+        <path d="M-62-24h56v56h-56v-56z" fill="#FFF" />
+      </clipPath>
+      <g clipPath="url(#fortidigutlosning_svg__a)">
+        <use
+          xlinkHref="#fortidigutlosning_svg__path0_fill"
+          transform="translate(-48.634 -12.615)"
+          fill="#283D46"
+        />
+        <use
+          xlinkHref="#fortidigutlosning_svg__path1_fill"
+          transform="translate(-55 -20)"
+          fill="#283D46"
+        />
+      </g>
+      <use
+        xlinkHref="#fortidigutlosning_svg__path2_fill"
+        transform="translate(-21 17)"
+        fill="#283D46"
+      />
+    </g>
+    <defs>
+      <path
+        id="fortidigutlosning_svg__path0_fill"
+        d="M2.634 0H0v5.02a8.134 8.134 0 0 0 16.268 0V0H4.634v5.615a1 1 0 0 1-2 0V0z"
+      />
+      <path
+        id="fortidigutlosning_svg__path1_fill"
+        fillRule="evenodd"
+        d="M0 0h29v2h-2v10.5c0 5.162-3.129 9.593-7.593 11.5C23.872 25.907 27 30.338 27 35.5V46h2v2H0v-2h2V35.5c0-5.162 3.129-9.593 7.593-11.5C5.129 22.093 2 17.662 2 12.5V2H0V0zm4 46h21V35.5c0-5.462-4.17-9.95-9.5-10.453v-2.094c5.33-.504 9.5-4.991 9.5-10.453V2H4v10.5c0 5.462 4.17 9.95 9.5 10.453v2.094C8.17 25.551 4 30.038 4 35.5V46z"
+      />
+      <path
+        id="fortidigutlosning_svg__path2_fill"
+        fillRule="evenodd"
+        d="M13 6h2V0H9v2h2.628L8.565 5.064A5.455 5.455 0 1 0 9.97 6.486L13 3.456V6zM8.91 9.545a3.455 3.455 0 1 1-6.91 0 3.455 3.455 0 0 1 6.91 0z"
+      />
+    </defs>
+  </svg>
+);
+
+export default SvgFortidigutlosning;

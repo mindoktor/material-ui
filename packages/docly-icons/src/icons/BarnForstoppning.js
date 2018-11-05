@@ -1,6 +1,42 @@
 import React from 'react';
-import createSvgIcon from '../utils/createSvgIcon';
 
-export default createSvgIcon(
-  <React.Fragment><g transform="translate(292 -148)"><g><g fill="#283D46" transform="translate(-281 138)"><use xlinkHref="#path0_fill" /><use xlinkHref="#path1_fill" /><use xlinkHref="#path2_fill" /><use xlinkHref="#path3_fill" /></g></g><g fill="#FF383B" transform="translate(-272 182)"><use xlinkHref="#path4_fill" /><use xlinkHref="#path5_fill" /><use xlinkHref="#path6_fill" /></g></g><defs><path id="path0_fill" fillRule="evenodd" d="M17 0h10v18c0 2.8273-1.3037 5.35-3.3427 7H25c4.9706 0 9 4.0294 9 9s-4.0294 9-9 9h-1.3427C25.6963 44.65 27 47.1727 27 50v20c0 2.7614-2.2386 5-5 5s-5-2.2386-5-5V51H9c-4.97056 0-9-4.0294-9-9 0-3.4829 1.97845-6.5038 4.8728-8C1.97845 32.5038 0 29.4829 0 26c0-4.9706 4.02944-9 9-9h8V0zM9 33v2c-3.86599 0-7 3.134-7 7s3.13401 7 7 7h10v21c0 1.6569 1.3431 3 3 3s3-1.3431 3-3V50c0-3.866-3.134-7-7-7v-2h7c3.866 0 7-3.134 7-7s-3.134-7-7-7h-7v-2c3.866 0 7-3.134 7-7V2h-6v17H9c-3.86599 0-7 3.134-7 7s3.13401 7 7 7z" /><path id="path1_fill" d="M23 27H9v-2h14v2z" /><path id="path2_fill" d="M9 41h9v2H9v-2z" /><path id="path3_fill" d="M25 33H9v2h16v-2z" /><path id="path4_fill" d="M2 0H0v4h2V0z" /><path id="path5_fill" d="M5 0H3v4h2V0z" /><path id="path6_fill" d="M11 22h4V5c-.5815-2.90729-3.1342-5-6.09903-5H6v4h5v18z" /></defs></React.Fragment>
-, 'BarnForstoppning');
+const SvgBarnForstoppning = props => (
+  <svg viewBox="0 0 60 60" {...props}>
+    <g transform="translate(292 -148)">
+      <clipPath id="barn_forstoppning_svg__a" clipRule="evenodd">
+        <path d="M-292 148h56v56h-56v-56z" fill="#FFF" />
+      </clipPath>
+      <g clipPath="url(#barn_forstoppning_svg__a)">
+        <g transform="translate(-281 138)" fill="#283D46">
+          <use xlinkHref="#barn_forstoppning_svg__path0_fill" />
+          <use xlinkHref="#barn_forstoppning_svg__path1_fill" />
+          <use xlinkHref="#barn_forstoppning_svg__path2_fill" />
+          <use xlinkHref="#barn_forstoppning_svg__path3_fill" />
+        </g>
+      </g>
+      <g transform="translate(-272 182)" fill="#FF383B">
+        <use xlinkHref="#barn_forstoppning_svg__path4_fill" />
+        <use xlinkHref="#barn_forstoppning_svg__path5_fill" />
+        <use xlinkHref="#barn_forstoppning_svg__path6_fill" />
+      </g>
+    </g>
+    <defs>
+      <path
+        id="barn_forstoppning_svg__path0_fill"
+        fillRule="evenodd"
+        d="M17 0h10v18a8.983 8.983 0 0 1-3.343 7H25a9 9 0 1 1 0 18h-1.343A8.983 8.983 0 0 1 27 50v20a5 5 0 0 1-10 0V51H9a9 9 0 0 1-4.127-17A9 9 0 0 1 9 17h8V0zM9 33v2a7 7 0 1 0 0 14h10v21a3 3 0 1 0 6 0V50a7 7 0 0 0-7-7v-2h7a7 7 0 1 0 0-14h-7v-2a7 7 0 0 0 7-7V2h-6v17H9a7 7 0 1 0 0 14z"
+      />
+      <path id="barn_forstoppning_svg__path1_fill" d="M23 27H9v-2h14v2z" />
+      <path id="barn_forstoppning_svg__path2_fill" d="M9 41h9v2H9v-2z" />
+      <path id="barn_forstoppning_svg__path3_fill" d="M25 33H9v2h16v-2z" />
+      <path id="barn_forstoppning_svg__path4_fill" d="M2 0H0v4h2V0z" />
+      <path id="barn_forstoppning_svg__path5_fill" d="M5 0H3v4h2V0z" />
+      <path
+        id="barn_forstoppning_svg__path6_fill"
+        d="M11 22h4V5a6.22 6.22 0 0 0-6.099-5H6v4h5v18z"
+      />
+    </defs>
+  </svg>
+);
+
+export default SvgBarnForstoppning;

@@ -1,6 +1,98 @@
 import React from 'react';
-import createSvgIcon from '../utils/createSvgIcon';
 
-export default createSvgIcon(
-  <React.Fragment><g transform="translate(-91 24)"><g><use fill="#283D46" transform="translate(99.7428 -14.4287)" xlinkHref="#path0_fill" /><use fill="#283D46" transform="matrix(-.96593 .25882 .25882 .96593 111.864 -1)" xlinkHref="#path1_fill" /><use fill="#283D46" transform="translate(113 12)" xlinkHref="#path2_fill" /><use fill="#283D46" transform="rotate(-165.00004 65.67106976 -9.1358691)" xlinkHref="#path3_fill" /><use fill="#283D46" transform="rotate(14.99996 66.72959002 477.51616361)" xlinkHref="#path1_fill" /><use fill="#FF383B" transform="translate(120 -20)" xlinkHref="#path4_fill" /><use fill="#283D46" transform="scale(1 -1) rotate(15 49.47015293 404.04045409)" xlinkHref="#path3_fill" /><use fill="#2F424A" transform="translate(108 4)" xlinkHref="#path5_fill" /><use fill="#283D46" transform="translate(100.003 -7.5767)" xlinkHref="#path6_fill" /></g><use fill="#283D46" transform="translate(136.091 14)" xlinkHref="#path7_fill" /></g><defs><path id="path0_fill" fillRule="evenodd" d="M30.2572 8.42875C16.1532 8.42875 4.23199 3.39669 0 .857493L.514496 0C4.61584 2.46081 16.3613 7.42875 30.2572 7.42875v1z" /><path id="path1_fill" d="M4 1.00265c0 1.10457-.89543 2-2 2s-2-.89543-2-2C0-.101919.89543.00264931 2 .00264931S4-.101919 4 1.00265z" /><path id="path2_fill" d="M12 2c0 1.10457-2.68629.5-6 .5S0 3.10457 0 2s2.68629-2 6-2 6 .89543 6 2z" /><path id="path3_fill" fillRule="evenodd" d="M8 1H0V0h8v1z" /><path id="path4_fill" d="M0 8.27452L3.30267 0h3.30268L4.40357 5.51635h4.12834L0 16.549l3.02745-8.27448H0z" /><path id="path5_fill" d="M4 4.80233C4 6.01607 3.10457 7 2 7 .895431 7 0 6.01607 0 4.80233 0 3.58858 2-.0000014 2-.0000014S4 3.58858 4 4.80233z" /><path id="path6_fill" d="M.238403 3.64935C.602234 9.32725 1.0146 15.7625 2.8637 21.1513c1.12864 3.2754 2.87869 6.3131 5.4287 8.5135 2.6156 2.2371 6.0782 3.6465 10.6325 3.9094.0239.0017.048.0025.0722.0025s.0483-.0008.0721-.0025c4.5543-.2629 8.0169-1.6723 10.6326-3.9094 2.5499-2.2004 4.3-5.2381 5.4286-8.5135 1.8491-5.3888 2.2615-11.82405 2.6253-17.50195.0773-1.20519.1523-2.37626.2384-3.495957L36 0c-.0906 1.17786-.1688 2.38989-.2484 3.6217v.00101c-.3665 5.6756-.76 11.77109-2.5129 16.87939-1.0589 3.0996-2.5275 5.6869-4.8369 7.6428-2.2307 1.9079-5.246 3.1825-9.4048 3.4301-4.1587-.2476-7.174-1.5222-9.40463-3.4301-2.30938-1.9559-3.77808-4.5432-4.83694-7.6428C3.00256 15.3938 2.60901 9.29831 2.24257 3.62271 2.16302 2.39055 2.08474 1.17818 1.99411 0L0 .153393C.086113 1.27285.161194 2.44444.238403 3.64935z" /><path id="path7_fill" fillRule="evenodd" d="M4.4545 10.8176C1.91965 10.3479 0 8.12541 0 5.45454 0 2.44208 2.44208 0 5.45454 0s5.45456 2.44208 5.45456 5.45454c0 2.6709-1.91971 4.89346-4.4546 5.36306v2.4958h2.5v2h-2.5V18h-2v-2.6866h-2.5v-2h2.5v-2.4958zM2 5.45454c0 1.9079 1.54665 3.45455 3.45454 3.45455s3.45455-1.54665 3.45455-3.45455C8.90909 3.54665 7.36243 2 5.45454 2 3.54665 2 2 3.54665 2 5.45454z" /></defs></React.Fragment>
-, 'PremensBesvar');
+const SvgPremensBesvar = props => (
+  <svg viewBox="0 0 56 56" {...props}>
+    <g transform="translate(-91 24)">
+      <clipPath id="premens_besvar_svg__a" clipRule="evenodd">
+        <path d="M91-24h56v56H91v-56z" fill="#FFF" />
+      </clipPath>
+      <g clipPath="url(#premens_besvar_svg__a)">
+        <use
+          xlinkHref="#premens_besvar_svg__path0_fill"
+          transform="translate(99.743 -14.429)"
+          fill="#283D46"
+        />
+        <use
+          xlinkHref="#premens_besvar_svg__path1_fill"
+          transform="scale(-1 1) rotate(15 -52.134 -425.346)"
+          fill="#283D46"
+        />
+        <use
+          xlinkHref="#premens_besvar_svg__path2_fill"
+          transform="translate(113 12)"
+          fill="#283D46"
+        />
+        <use
+          xlinkHref="#premens_besvar_svg__path3_fill"
+          transform="rotate(-165 65.671 -9.136)"
+          fill="#283D46"
+        />
+        <use
+          xlinkHref="#premens_besvar_svg__path1_fill"
+          transform="rotate(15 66.73 477.516)"
+          fill="#283D46"
+        />
+        <use
+          xlinkHref="#premens_besvar_svg__path4_fill"
+          transform="translate(120 -20)"
+          fill="#FF383B"
+        />
+        <use
+          xlinkHref="#premens_besvar_svg__path3_fill"
+          transform="scale(1 -1) rotate(15 49.47 404.04)"
+          fill="#283D46"
+        />
+        <use
+          xlinkHref="#premens_besvar_svg__path5_fill"
+          transform="translate(108 4)"
+          fill="#2F424A"
+        />
+        <use
+          xlinkHref="#premens_besvar_svg__path6_fill"
+          transform="translate(100.003 -7.577)"
+          fill="#283D46"
+        />
+      </g>
+      <use
+        xlinkHref="#premens_besvar_svg__path7_fill"
+        transform="translate(136.091 14)"
+        fill="#283D46"
+      />
+    </g>
+    <defs>
+      <path
+        id="premens_besvar_svg__path0_fill"
+        fillRule="evenodd"
+        d="M30.257 8.429C16.153 8.429 4.232 3.397 0 .857L.514 0c4.102 2.46 15.847 7.429 29.743 7.429v1z"
+      />
+      <path
+        id="premens_besvar_svg__path1_fill"
+        d="M4 1.003a2 2 0 1 1-4 0c0-1.105.895-1 2-1s2-.105 2 1z"
+      />
+      <path
+        id="premens_besvar_svg__path2_fill"
+        d="M12 2c0 1.105-2.686.5-6 .5S0 3.105 0 2s2.686-2 6-2 6 .895 6 2z"
+      />
+      <path id="premens_besvar_svg__path3_fill" fillRule="evenodd" d="M8 1H0V0h8v1z" />
+      <path
+        id="premens_besvar_svg__path4_fill"
+        d="M0 8.275L3.303 0h3.302L4.404 5.516h4.128L0 16.55l3.027-8.274H0z"
+      />
+      <path
+        id="premens_besvar_svg__path5_fill"
+        d="M4 4.802C4 6.016 3.105 7 2 7s-2-.984-2-2.198C0 3.59 2 0 2 0s2 3.589 2 4.802z"
+      />
+      <path
+        id="premens_besvar_svg__path6_fill"
+        d="M.238 3.65c.364 5.677.777 12.112 2.626 17.501 1.128 3.276 2.878 6.313 5.428 8.514 2.616 2.237 6.079 3.646 10.633 3.91a1.018 1.018 0 0 0 .144 0c4.555-.264 8.017-1.673 10.633-3.91 2.55-2.2 4.3-5.238 5.428-8.514 1.85-5.389 2.262-11.824 2.626-17.502.077-1.205.152-2.376.238-3.496L36 0c-.09 1.178-.169 2.39-.248 3.622-.367 5.676-.76 11.772-2.513 16.88-1.06 3.1-2.528 5.687-4.837 7.643-2.23 1.908-5.246 3.182-9.405 3.43-4.159-.248-7.174-1.522-9.405-3.43-2.309-1.956-3.778-4.543-4.837-7.643C3.003 15.394 2.61 9.298 2.243 3.622A298 298 0 0 0 1.994 0L0 .153c.086 1.12.161 2.291.238 3.496z"
+      />
+      <path
+        id="premens_besvar_svg__path7_fill"
+        fillRule="evenodd"
+        d="M4.455 10.818A5.456 5.456 0 0 1 5.455 0a5.455 5.455 0 0 1 1 10.818v2.495h2.5v2h-2.5V18h-2v-2.687h-2.5v-2h2.5v-2.495zM2 5.455a3.455 3.455 0 1 0 6.91 0 3.455 3.455 0 0 0-6.91 0z"
+      />
+    </defs>
+  </svg>
+);
+
+export default SvgPremensBesvar;

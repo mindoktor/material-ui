@@ -129,6 +129,7 @@ class HomePage extends React.Component {
                 >
                   {Object.keys(iconsByEntrywayId).map(id => {
                     const Icon = getIcon(id);
+                    console.log(Icon)
                     return (
                       <div
                         style={{
@@ -138,9 +139,9 @@ class HomePage extends React.Component {
                           // background: Icon.displayName === 'PlaceholderIcon' ? '#fcc' : '',
                         }}
                       >
-                        <Icon width="56" height="56" viewBox="0 0 56 56" />
+                        <Icon width="156" height="156" />
                         <div>
-                          {id}:{Icon.iconName}
+                          {id}:
                         </div>
                       </div>
                     );

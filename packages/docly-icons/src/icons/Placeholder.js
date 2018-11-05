@@ -1,6 +1,66 @@
 import React from 'react';
-import createSvgIcon from '../utils/createSvgIcon';
 
-export default createSvgIcon(
-  <React.Fragment><g transform="translate(-167 -149)"><g><use fill="#2F424A" transform="translate(171 154.667)" xlinkHref="#path0_fill" /><use fill="#2F424A" transform="matrix(-1 0 0 1 202.3 154.667)" xlinkHref="#path0_fill" /><use fill="#2F424A" transform="translate(184.984 180.333)" xlinkHref="#path1_fill" /><use fill="#2F424A" transform="translate(177.327 153)" xlinkHref="#path2_fill" /><use fill="#2F424A" transform="translate(190.646 153)" xlinkHref="#path2_fill" /><use fill="#2F424A" transform="translate(208.571 170.195)" xlinkHref="#path3_fill" /></g></g><defs><path id="path0_fill" fillRule="evenodd" d="M0 0h7.47333v2H2v9.0165c0 7.5388 6.11139 13.6502 13.6502 13.6502v2C7.00682 26.6667 0 19.6598 0 11.0165V0z" /><path id="path1_fill" fillRule="evenodd" d="M0 5.51593V0h2v5.51593C2 12.7789 7.88778 18.6667 15.1507 18.6667c7.263 0 13.1508-5.8878 13.1508-13.15077V0h2v5.51593c0 8.36757-6.7833 15.15077-15.1508 15.15077C6.78321 20.6667 0 13.8835 0 5.51593z" /><path id="path2_fill" d="M5.32733 2.66667c0 1.47276-1.19256 2.66666-2.66366 2.66666C1.19256 5.33333 0 4.13943 0 2.66667 0 1.19391 1.19256 0 2.66367 0c1.4711 0 2.66366 1.19391 2.66366 2.66667z" /><path id="path3_fill" fillRule="evenodd" d="M5.71429 9.46341c2.0456 0 3.71428-1.665 3.71428-3.7317C9.42857 3.665 7.75989 2 5.71429 2 3.66868 2 2 3.665 2 5.73171c0 2.0667 1.66868 3.7317 3.71429 3.7317zm0 1.99999c3.15591 0 5.71431-2.56616 5.71431-5.73169C11.4286 2.56617 8.8702 0 5.71429 0 2.55837 0 0 2.56617 0 5.73171c0 3.16553 2.55837 5.73169 5.71429 5.73169z" /></defs></React.Fragment>
-, 'Placeholder');
+const SvgPlaceholder = props => (
+  <svg viewBox="0 0 57 56" {...props}>
+    <g transform="translate(-167 -149)">
+      <clipPath id="placeholder_svg__a" clipRule="evenodd">
+        <path d="M168 149h56v56h-56v-56z" fill="#FFF" />
+      </clipPath>
+      <g clipPath="url(#placeholder_svg__a)">
+        <use
+          xlinkHref="#placeholder_svg__path0_fill"
+          transform="translate(171 154.667)"
+          fill="#2F424A"
+        />
+        <use
+          xlinkHref="#placeholder_svg__path0_fill"
+          transform="matrix(-1 0 0 1 202.3 154.667)"
+          fill="#2F424A"
+        />
+        <use
+          xlinkHref="#placeholder_svg__path1_fill"
+          transform="translate(184.984 180.333)"
+          fill="#2F424A"
+        />
+        <use
+          xlinkHref="#placeholder_svg__path2_fill"
+          transform="translate(177.327 153)"
+          fill="#2F424A"
+        />
+        <use
+          xlinkHref="#placeholder_svg__path2_fill"
+          transform="translate(190.646 153)"
+          fill="#2F424A"
+        />
+        <use
+          xlinkHref="#placeholder_svg__path3_fill"
+          transform="translate(208.571 170.195)"
+          fill="#2F424A"
+        />
+      </g>
+    </g>
+    <defs>
+      <path
+        id="placeholder_svg__path0_fill"
+        fillRule="evenodd"
+        d="M0 0h7.473v2H2v9.017c0 7.538 6.111 13.65 13.65 13.65v2C7.007 26.667 0 19.66 0 11.017V0z"
+      />
+      <path
+        id="placeholder_svg__path1_fill"
+        fillRule="evenodd"
+        d="M0 5.516V0h2v5.516c0 7.263 5.888 13.15 13.15 13.15 7.264 0 13.152-5.887 13.152-13.15V0h2v5.516c0 8.367-6.784 15.15-15.151 15.15C6.783 20.667 0 13.884 0 5.517z"
+      />
+      <path
+        id="placeholder_svg__path2_fill"
+        d="M5.327 2.667a2.665 2.665 0 0 1-2.663 2.666A2.665 2.665 0 0 1 0 2.667 2.665 2.665 0 0 1 2.664 0a2.665 2.665 0 0 1 2.663 2.667z"
+      />
+      <path
+        id="placeholder_svg__path3_fill"
+        fillRule="evenodd"
+        d="M5.714 9.463A3.723 3.723 0 0 0 9.43 5.732 3.723 3.723 0 0 0 5.714 2 3.723 3.723 0 0 0 2 5.732a3.723 3.723 0 0 0 3.714 3.731zm0 2c3.156 0 5.715-2.566 5.715-5.731C11.429 2.566 8.87 0 5.714 0 2.558 0 0 2.566 0 5.732c0 3.165 2.558 5.731 5.714 5.731z"
+      />
+    </defs>
+  </svg>
+);
+
+export default SvgPlaceholder;

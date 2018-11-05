@@ -1,6 +1,98 @@
 import React from 'react';
-import createSvgIcon from '../utils/createSvgIcon';
 
-export default createSvgIcon(
-  <React.Fragment><g transform="translate(137 24)"><g><use fill="#283D46" transform="translate(-130 -13)" xlinkHref="#path0_fill" /><use fill="#283D46" transform="translate(-130.257 -18.4287)" xlinkHref="#path1_fill" /><use fill="#2F424A" transform="translate(-125 -18)" xlinkHref="#path2_fill" /><use fill="#283D46" transform="translate(-121 -5)" xlinkHref="#path3_fill" /><use fill="#283D46" transform="translate(-105 -5)" xlinkHref="#path3_fill" /><use fill="#283D46" transform="translate(-117.116 8.62092)" xlinkHref="#path4_fill" /><use fill="#283D46" transform="translate(-112.8 11.6)" xlinkHref="#path5_fill" /><use fill="#FF383B" transform="translate(-103 2)" xlinkHref="#path6_fill" /><use fill="#FF383B" transform="translate(-127 2)" xlinkHref="#path6_fill" /></g><use fill="#283D46" transform="translate(-91.9091 14)" xlinkHref="#path7_fill" /></g><defs><path id="path0_fill" fillRule="evenodd" d="M2 0H0v17c0 10.4934 8.50659 19 19 19 10.4934 0 19-8.5066 19-19V0h-2v17c0 9.3888-7.6112 17-17 17-9.38884 0-17-7.6112-17-17V0z" /><path id="path1_fill" fillRule="evenodd" d="M30.2572 8.42875C16.1532 8.42875 4.23199 3.39669 0 .857493L.514496 0C4.61584 2.46081 16.3613 7.42875 30.2572 7.42875v1z" /><path id="path2_fill" d="M6 6.86047C6 8.59438 4.65685 10 3 10S0 8.59438 0 6.86047C0 5.12655 3-.00000201 3-.00000201S6 5.12655 6 6.86047z" /><path id="path3_fill" d="M4 2c0 1.10457-.89543 2-2 2-1.104569 0-2-.89543-2-2C0 .895431.895431 0 2 0c1.10457 0 2 .895431 2 2z" /><path id="path4_fill" fillRule="evenodd" d="M4.71438 1.13667c-.3344-.168271-.63537-.200247-.99766-.10599l-3.48373.83464L0 .892841 3.48373.0581981C4.0144-.0614879 4.65282.00633937 5.1465.234856l.58268.279202c.40982.196368.88655.196367 1.29637 0l.54989-.26349C8.09289.0114351 8.76411-.0489981 9.31596.0938627L12.2485.896832l-.264.964498-2.93263-.80297c-.37637-.111292-.69388-.082706-1.04431.09402l-.5499.26349c-.68301.32728-1.47758.32728-2.1606 0l-.58268-.2792z" /><path id="path5_fill" fillRule="evenodd" d="M1.78244 1.53292C1.05666 1.42644.366811 1.07304 0 .8L.6 0c.299855.226956.76001.473561 1.31756.542085.522.071182 1.06226-.029014 1.52889-.4956384l.7071.7071064c-.73337.733377-1.60977.883177-2.37111.779367z" /><path id="path6_fill" d="M8 4c0 2.20914-1.79086 4-4 4S0 6.20914 0 4s1.79086-4 4-4 4 1.79086 4 4z" /><path id="path7_fill" fillRule="evenodd" d="M4.4545 10.8176C1.91965 10.3479 0 8.12541 0 5.45454 0 2.44208 2.44208 0 5.45454 0s5.45456 2.44208 5.45456 5.45454c0 2.6709-1.91971 4.89346-4.4546 5.36306v2.4958h2.5v2h-2.5V18h-2v-2.6866h-2.5v-2h2.5v-2.4958zM2 5.45454c0 1.9079 1.54665 3.45455 3.45454 3.45455s3.45455-1.54665 3.45455-3.45455C8.90909 3.54665 7.36243 2 5.45454 2 3.54665 2 2 3.54665 2 5.45454z" /></defs></React.Fragment>
-, 'Klimakteriebesvar');
+const SvgKlimakteriebesvar = props => (
+  <svg viewBox="0 0 56 56" {...props}>
+    <g transform="translate(137 24)">
+      <clipPath id="klimakteriebesvar_svg__a" clipRule="evenodd">
+        <path d="M-137-24h56v56h-56v-56z" fill="#FFF" />
+      </clipPath>
+      <g clipPath="url(#klimakteriebesvar_svg__a)">
+        <use
+          xlinkHref="#klimakteriebesvar_svg__path0_fill"
+          transform="translate(-130 -13)"
+          fill="#283D46"
+        />
+        <use
+          xlinkHref="#klimakteriebesvar_svg__path1_fill"
+          transform="translate(-130.257 -18.429)"
+          fill="#283D46"
+        />
+        <use
+          xlinkHref="#klimakteriebesvar_svg__path2_fill"
+          transform="translate(-125 -18)"
+          fill="#2F424A"
+        />
+        <use
+          xlinkHref="#klimakteriebesvar_svg__path3_fill"
+          transform="translate(-121 -5)"
+          fill="#283D46"
+        />
+        <use
+          xlinkHref="#klimakteriebesvar_svg__path3_fill"
+          transform="translate(-105 -5)"
+          fill="#283D46"
+        />
+        <use
+          xlinkHref="#klimakteriebesvar_svg__path4_fill"
+          transform="translate(-117.116 8.62)"
+          fill="#283D46"
+        />
+        <use
+          xlinkHref="#klimakteriebesvar_svg__path5_fill"
+          transform="translate(-112.8 11.6)"
+          fill="#283D46"
+        />
+        <use
+          xlinkHref="#klimakteriebesvar_svg__path6_fill"
+          transform="translate(-103 2)"
+          fill="#FF383B"
+        />
+        <use
+          xlinkHref="#klimakteriebesvar_svg__path6_fill"
+          transform="translate(-127 2)"
+          fill="#FF383B"
+        />
+      </g>
+      <use
+        xlinkHref="#klimakteriebesvar_svg__path7_fill"
+        transform="translate(-91.91 14)"
+        fill="#283D46"
+      />
+    </g>
+    <defs>
+      <path
+        id="klimakteriebesvar_svg__path0_fill"
+        fillRule="evenodd"
+        d="M2 0H0v17c0 10.493 8.507 19 19 19s19-8.507 19-19V0h-2v17c0 9.389-7.611 17-17 17S2 26.389 2 17V0z"
+      />
+      <path
+        id="klimakteriebesvar_svg__path1_fill"
+        fillRule="evenodd"
+        d="M30.257 8.429C16.153 8.429 4.232 3.397 0 .857L.514 0c4.102 2.46 15.847 7.429 29.743 7.429v1z"
+      />
+      <path
+        id="klimakteriebesvar_svg__path2_fill"
+        d="M6 6.86C6 8.594 4.657 10 3 10S0 8.594 0 6.86C0 5.127 3 0 3 0s3 5.127 3 6.86z"
+      />
+      <path id="klimakteriebesvar_svg__path3_fill" d="M4 2a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" />
+      <path
+        id="klimakteriebesvar_svg__path4_fill"
+        fillRule="evenodd"
+        d="M4.714 1.137a1.32 1.32 0 0 0-.997-.106l-3.484.834L0 .893 3.484.058c.53-.12 1.169-.052 1.662.177l.583.28a1.5 1.5 0 0 0 1.297 0l.55-.264c.517-.24 1.188-.3 1.74-.157l2.932.803-.263.964-2.933-.803a1.321 1.321 0 0 0-1.044.094l-.55.264a2.5 2.5 0 0 1-2.16 0l-.584-.28z"
+      />
+      <path
+        id="klimakteriebesvar_svg__path5_fill"
+        fillRule="evenodd"
+        d="M1.782 1.533A4.27 4.27 0 0 1 0 .8L.6 0c.3.227.76.474 1.318.542C2.44.613 2.98.513 3.446.046l.708.708c-.734.733-1.61.883-2.372.779z"
+      />
+      <path id="klimakteriebesvar_svg__path6_fill" d="M8 4a4 4 0 1 1-8 0 4 4 0 0 1 8 0z" />
+      <path
+        id="klimakteriebesvar_svg__path7_fill"
+        fillRule="evenodd"
+        d="M4.455 10.818A5.456 5.456 0 0 1 5.455 0a5.455 5.455 0 0 1 1 10.818v2.495h2.5v2h-2.5V18h-2v-2.687h-2.5v-2h2.5v-2.495zM2 5.455a3.455 3.455 0 1 0 6.91 0 3.455 3.455 0 0 0-6.91 0z"
+      />
+    </defs>
+  </svg>
+);
+
+export default SvgKlimakteriebesvar;
