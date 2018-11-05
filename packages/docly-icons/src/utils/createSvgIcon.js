@@ -4,12 +4,12 @@ import pure from 'recompose/pure';
 
 function createSvgIcon(path, displayName) {
   // let Icon = props => <SvgIcon {...props}>{path}</SvgIcon>;
-  let Icon = props => <svg {...props}>{path}</svg>;
+  const Icon = props => <svg {...props}>{path}</svg>;
 
   Icon.displayName = `${displayName}Icon`;
-  Icon = pure(Icon);
-  Icon.muiName = 'SvgIcon';
-
+  // Icon = pure(Icon);
+  // Icon.muiName = 'SvgIcon';
+  Icon.iconName = displayName;
   Icon.defaultProps = {
     // width: 56,
     // height: 56,

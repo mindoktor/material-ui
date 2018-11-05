@@ -119,13 +119,29 @@ class HomePage extends React.Component {
                 >
                   {"React components that implement Google's Material Design."}
                 </Typography>
-                <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+                <div
+                  style={{
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    fontSize: 11,
+                    textAlign: 'center',
+                  }}
+                >
                   {Object.keys(iconsByEntrywayId).map(id => {
                     const Icon = getIcon(id);
                     return (
-                      <div>
+                      <div
+                        style={{
+                          padding: 10,
+                          // width: 100,
+                          // height: 100,
+                          // background: Icon.displayName === 'PlaceholderIcon' ? '#fcc' : '',
+                        }}
+                      >
                         <Icon width="56" height="56" viewBox="0 0 56 56" />
-                        <div style={{ textAlign: 'center' }}>{id}</div>
+                        <div>
+                          {id}:{Icon.iconName}
+                        </div>
                       </div>
                     );
                   })}
