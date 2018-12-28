@@ -4,7 +4,7 @@
   "scripts": {
     "preconvert": "rimraf src/icons",
     "convert": "svgr -d src/icons src/images && yarn convert:toc",
-    "convert:toc": "cd ../../ && babel-node --config-file ./babel.config.js packages/docly-icons/convert.js --out packages/docly-icons/src/icons",
+    "convert:toc": "cd ../../ && babel-node --config-file ./babel.config.js packages/docly-guide-icons/convert.js --out packages/docly-guide-icons/src/icons",
     "prebuild": "rimraf build",
     "build:es2015": "cross-env NODE_ENV=production babel --config-file ../../babel.config.js ./src/icons --out-dir ./build",
     "build": "yarn convert && yarn build:es2015"
