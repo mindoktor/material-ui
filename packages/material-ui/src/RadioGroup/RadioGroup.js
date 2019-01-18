@@ -9,13 +9,15 @@ import { createChainedFunction, find } from '../utils/helpers';
 class RadioGroup extends React.Component {
   radios = [];
 
-  state = {
-    value: null,
-  };
-
   constructor(props) {
     super();
     this.isControlled = props.value != null;
+
+    if (!this.isControlled) {
+      this.state = {
+        value: props.defaultValue,
+      };
+    }
   }
 
   focus = () => {
@@ -93,6 +95,10 @@ RadioGroup.propTypes = {
    * The content of the component.
    */
   children: PropTypes.node,
+  /**
+   * The default input value, useful when not controlling the component.
+   */
+  defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
   /**
    * The name used to reference the value of the control.
    */
