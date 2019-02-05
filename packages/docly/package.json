@@ -12,13 +12,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/mui-org/material-ui.git"
+    "url": "https://github.com/mindoktor/material-ui"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mui-org/material-ui/issues"
+    "url": "https://github.com/mindoktor/material-ui/issues"
   },
-  "homepage": "http://material-ui.com/",
+  "homepage": "https://docly-ui.netlify.com/",
   "scripts": {
     "copy-material-core": "rimraf src/material-core && cp -R ../material-ui/src src/material-core",
     "copy-material-utils": "rimraf src/material-ui-utils && cp -R ../material-ui-utils/src src/material-ui-utils",
