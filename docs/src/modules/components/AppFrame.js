@@ -28,6 +28,7 @@ import Link from 'docs/src/modules/components/Link';
 import AppDrawer from 'docs/src/modules/components/AppDrawer';
 import AppSearch from 'docs/src/modules/components/AppSearch';
 import Notifications from 'docs/src/modules/components/Notifications';
+import MarkdownLinks from 'docs/src/modules/components/MarkdownLinks';
 import PageTitle from 'docs/src/modules/components/PageTitle';
 import { ACTION_TYPES } from 'docs/src/modules/constants';
 
@@ -42,6 +43,41 @@ Router.onRouteChangeComplete = () => {
 Router.onRouteChangeError = () => {
   NProgress.done();
 };
+
+const languages = [
+  {
+    code: 'en',
+    text: '🇺🇸 English',
+  },
+  {
+    code: 'zh',
+    text: '🇨🇳 中文',
+  },
+  // {
+  //   code: 'ru',
+  //   text: '🇷🇺 Русский',
+  // },
+  // {
+  //   code: 'pt',
+  //   text: '🇧🇷 Português',
+  // },
+  // {
+  //   code: 'fr',
+  //   text: '🇫🇷 Français',
+  // },
+  // {
+  //   code: 'es',
+  //   text: '🇪🇸 Español',
+  // },
+  // {
+  //   code: 'de',
+  //   text: '🇩🇪 Deutsch',
+  // },
+  // {
+  //   code: 'ja',
+  //   text: '🇯🇵 日本語',
+  // },
+];
 
 const styles = theme => ({
   root: {
@@ -153,11 +189,28 @@ class AppFrame extends React.Component {
 
           return (
             <div className={classes.root}>
-              <MuiThemeProvider theme={doclyTheme}>
-                <NProgressBar />
-                <CssBaseline />
-                <AppBar className={appBarClassName}>
-                  <Toolbar>
+              <NProgressBar />
+              <CssBaseline />
+              <Notifications />
+              <MarkdownLinks />
+              <AppBar className={appBarClassName}>
+                <Toolbar>
+                  <IconButton
+                    color="inherit"
+                    aria-label="Open drawer"
+                    onClick={this.handleDrawerOpen}
+                    className={navIconClassName}
+                  >
+                    <MenuIcon />
+                  </IconButton>
+                  {title !== null && (
+                    <Typography className={classes.title} variant="h6" color="inherit" noWrap>
+                      {title}
+                    </Typography>
+                  )}
+                  <div className={classes.grow} />
+                  <AppSearch />
+                  <Tooltip title="Change language" enterDelay={300}>
                     <IconButton
                       color="inherit"
                       aria-label="Open drawer"
@@ -166,97 +219,88 @@ class AppFrame extends React.Component {
                     >
                       <MenuIcon />
                     </IconButton>
-                    {title !== null && (
-                      <Typography className={classes.title} variant="h6" color="inherit" noWrap>
-                        {title}
-                      </Typography>
-                    )}
-                    <div className={classes.grow} />
-                    <AppSearch />
-                    <Tooltip title="Change language" enterDelay={300}>
-                      <IconButton
-                        color="inherit"
-                        aria-owns={languageMenu ? 'language-menu' : undefined}
-                        aria-haspopup="true"
-                        onClick={this.handleLanguageIconClick}
-                        data-ga-event-category="AppBar"
-                        data-ga-event-action="language"
+                  </Tooltip>
+                  <Menu
+                    id="language-menu"
+                    anchorEl={languageMenu}
+                    open={Boolean(languageMenu)}
+                    onClose={this.handleLanguageMenuClose}
+                  >
+                    {languages.map(language => (
+                      <MenuItem
+                        key={language.code}
+                        selected={userLanguage === language.code}
+                        onClick={this.handleLanguageMenuItemClick(language.code)}
                       >
-                        <LanguageIcon />
-                      </IconButton>
-                    </Tooltip>
-                    <Menu
-                      id="language-menu"
-                      anchorEl={languageMenu}
-                      open={Boolean(languageMenu)}
-                      onClose={this.handleLanguageMenuClose}
+                        {language.text}
+                      </MenuItem>
+                    ))}
+                  </Menu>
+                  <Tooltip title="Edit docs colors" enterDelay={300}>
+                    <IconButton
+                      color="inherit"
+                      aria-label="Edit docs colors"
+                      component={Link}
+                      naked
+                      href="/style/color/#color-tool"
+                      data-ga-event-category="AppBar"
+                      data-ga-event-action="colors"
                     >
-                      <MenuItem
-                        selected={userLanguage === 'en'}
-                        onClick={this.handleLanguageMenuItemClick('en')}
-                      >
-                        English
-                      </MenuItem>
-                      <MenuItem
-                        selected={userLanguage === 'zh'}
-                        onClick={this.handleLanguageMenuItemClick('zh')}
-                      >
-                        中文
-                      </MenuItem>
-                    </Menu>
-                    <Tooltip title="Edit docs colors" enterDelay={300}>
-                      <IconButton
-                        color="inherit"
-                        aria-label="Edit docs colors"
-                        component={Link}
-                        href="/style/color/#color-tool"
-                        data-ga-event-category="AppBar"
-                        data-ga-event-action="colors"
-                      >
-                        <ColorsIcon />
-                      </IconButton>
-                    </Tooltip>
-                    <Tooltip title="Toggle light/dark theme" enterDelay={300}>
-                      <IconButton
-                        color="inherit"
-                        onClick={this.handleTogglePaletteType}
-                        aria-label="Toggle light/dark theme"
-                        data-ga-event-category="AppBar"
-                        data-ga-event-action="dark"
-                      >
-                        {reduxTheme.paletteType === 'light' ? (
-                          <LightbulbOutlineIcon />
-                        ) : (
-                          <LightbulbFullIcon />
-                        )}
-                      </IconButton>
-                    </Tooltip>
-                    <Tooltip title="Toggle right-to-left/left-to-right" enterDelay={300}>
-                      <IconButton
-                        color="inherit"
-                        aria-label="Open drawer"
-                        onClick={this.handleDrawerOpen}
-                        className={navIconClassName}
-                      >
-                        {reduxTheme.direction === 'rtl' ? (
-                          <FormatTextdirectionLToR />
-                        ) : (
-                          <FormatTextdirectionRToL />
-                        )}
-                      </IconButton>
-                    </Tooltip>
-                  </Toolbar>
-                </AppBar>
-                <Notifications />
-                <AppDrawer
-                  className={classes.drawer}
-                  disablePermanent={disablePermanent}
-                  onClose={this.handleDrawerClose}
-                  onOpen={this.handleDrawerOpen}
-                  mobileOpen={this.state.mobileOpen}
-                />
-                {children}
-              </MuiThemeProvider>
+                      <ColorsIcon />
+                    </IconButton>
+                  </Tooltip>
+                  <Tooltip title="Toggle light/dark theme" enterDelay={300}>
+                    <IconButton
+                      color="inherit"
+                      onClick={this.handleTogglePaletteType}
+                      aria-label="Toggle light/dark theme"
+                      data-ga-event-category="AppBar"
+                      data-ga-event-action="dark"
+                    >
+                      {reduxTheme.paletteType === 'light' ? (
+                        <LightbulbOutlineIcon />
+                      ) : (
+                        <LightbulbFullIcon />
+                      )}
+                    </IconButton>
+                  </Tooltip>
+                  <Tooltip title="Toggle right-to-left/left-to-right" enterDelay={300}>
+                    <IconButton
+                      color="inherit"
+                      onClick={this.handleToggleDirection}
+                      aria-label="Toggle right-to-left/left-to-right"
+                      data-ga-event-category="AppBar"
+                      data-ga-event-action="rtl"
+                    >
+                      {reduxTheme.direction === 'rtl' ? (
+                        <FormatTextdirectionLToR />
+                      ) : (
+                        <FormatTextdirectionRToL />
+                      )}
+                    </IconButton>
+                  </Tooltip>
+                  <Tooltip title="GitHub repository" enterDelay={300}>
+                    <IconButton
+                      component="a"
+                      color="inherit"
+                      href="https://github.com/mui-org/material-ui"
+                      aria-label="GitHub repository"
+                      data-ga-event-category="AppBar"
+                      data-ga-event-action="github"
+                    >
+                      <GithubIcon />
+                    </IconButton>
+                  </Tooltip>
+                </Toolbar>
+              </AppBar>
+              <AppDrawer
+                className={classes.drawer}
+                disablePermanent={disablePermanent}
+                onClose={this.handleDrawerClose}
+                onOpen={this.handleDrawerOpen}
+                mobileOpen={this.state.mobileOpen}
+              />
+              {children}
             </div>
           );
         }}

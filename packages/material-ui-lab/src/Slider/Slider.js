@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import keycode from 'keycode';
 import classNames from 'classnames';
 import withStyles from '@material-ui/core/styles/withStyles';
 import ButtonBase from '@material-ui/core/ButtonBase';
@@ -223,6 +222,24 @@ if (process.env.NODE_ENV !== 'production' && !React.createContext) {
   throw new Error('Material-UI: react@16.3.0 or greater is required.');
 }
 
+/**
+ * @param {number} rawValue
+ * @param {object} props
+ */
+export function defaultValueReducer(rawValue, props) {
+  const { disabled, step } = props;
+
+  if (disabled) {
+    return null;
+  }
+
+  if (step) {
+    return roundToStep(rawValue, step);
+  }
+
+  return Number(rawValue.toFixed(3));
+}
+
 class Slider extends React.Component {
   state = {
     currentState: 'initial',
@@ -271,25 +288,25 @@ class Slider extends React.Component {
     const step = this.props.step || onePercent;
     let value;
 
-    switch (keycode(event)) {
-      case 'home':
+    switch (event.key) {
+      case 'Home':
         value = min;
         break;
-      case 'end':
+      case 'End':
         value = max;
         break;
-      case 'page up':
+      case 'PageUp':
         value = currentValue + onePercent * 10;
         break;
-      case 'page down':
+      case 'PageDown':
         value = currentValue - onePercent * 10;
         break;
-      case 'right':
-      case 'up':
+      case 'ArrowRight':
+      case 'ArrowUp':
         value = currentValue + step;
         break;
-      case 'left':
-      case 'down':
+      case 'ArrowLeft':
+      case 'ArrowDown':
         value = currentValue - step;
         break;
       default:
@@ -431,21 +448,11 @@ class Slider extends React.Component {
   }
 
   emitChange(event, rawValue, callback) {
-    const { step, value: previousValue, onChange, disabled } = this.props;
-    let value = rawValue;
+    const { onChange, value: previousValue, valueReducer } = this.props;
+    const newValue = valueReducer(rawValue, this.props, event);
 
-    if (disabled) {
-      return;
-    }
-
-    if (step) {
-      value = roundToStep(rawValue, step);
-    } else {
-      value = Number(rawValue.toFixed(3));
-    }
-
-    if (typeof onChange === 'function' && value !== previousValue) {
-      onChange(event, value);
+    if (newValue !== null && newValue !== previousValue && typeof onChange === 'function') {
+      onChange(event, newValue);
 
       if (typeof callback === 'function') {
         callback();
@@ -502,6 +509,7 @@ class Slider extends React.Component {
       step,
       theme,
       value,
+      valueReducer,
       vertical,
       ...other
     } = this.props;
@@ -659,6 +667,14 @@ Slider.propTypes = {
    */
   value: PropTypes.number.isRequired,
   /**
+   * the reducer used to process the value emitted from the slider. If `null` or
+   * the same value is returned no change is emitted.
+   * @param {number} rawValue - value in [min, max]
+   * @param {SliderProps} props - current props of the Slider
+   * @param {Event} event - the event the change was triggered from
+   */
+  valueReducer: PropTypes.func,
+  /**
    * If `true`, the slider will be vertical.
    */
   vertical: PropTypes.bool,
@@ -668,6 +684,7 @@ Slider.defaultProps = {
   min: 0,
   max: 100,
   component: 'div',
+  valueReducer: defaultValueReducer,
 };
 
 export default withStyles(styles, { name: 'MuiSlider', withTheme: true })(Slider);

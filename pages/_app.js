@@ -11,15 +11,39 @@ import { loadCSS } from 'fg-loadcss/src/loadCSS';
 import PageContext from 'docs/src/modules/components/PageContext';
 import getPageContext from 'docs/src/modules/styles/getPageContext';
 import GoogleAnalytics from 'docs/src/modules/components/GoogleAnalytics';
+import loadScript from 'docs/src/modules/utils/loadScript';
 
-if (process.browser) {
+let dependenciesLoaded = false;
+
+function loadDependencies() {
+  if (dependenciesLoaded) {
+    return;
+  }
+
+  dependenciesLoaded = true;
+
   loadCSS(
     'https://fonts.googleapis.com/icon?family=Material+Icons',
     document.querySelector('#insertion-point-jss'),
   );
-  loadCSS(
-    'https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css',
-    document.querySelector('#insertion-point-jss'),
+  loadScript('https://www.google-analytics.com/analytics.js', document.querySelector('head'));
+}
+
+if (process.browser) {
+  // eslint-disable-next-line no-console
+  console.log(
+    `%c
+
+███╗   ███╗ █████╗ ████████╗███████╗██████╗ ██╗ █████╗ ██╗      ██╗   ██╗██╗
+████╗ ████║██╔══██╗╚══██╔══╝██╔════╝██╔══██╗██║██╔══██╗██║      ██║   ██║██║
+██╔████╔██║███████║   ██║   █████╗  ██████╔╝██║███████║██║█████╗██║   ██║██║
+██║╚██╔╝██║██╔══██║   ██║   ██╔══╝  ██╔══██╗██║██╔══██║██║╚════╝██║   ██║██║
+██║ ╚═╝ ██║██║  ██║   ██║   ███████╗██║  ██║██║██║  ██║███████╗ ╚██████╔╝██║
+╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═╝╚══════╝  ╚═════╝ ╚═╝
+
+Tip: you can access the \`theme\` object directly in the console.
+`,
+    'font-family:monospace;color:#1976d2;font-size:12px;',
   );
 }
 
@@ -265,6 +289,9 @@ const pages = [
         title: 'About The Lab',
       },
       {
+        pathname: '/lab/breadcrumbs',
+      },
+      {
         pathname: '/lab/slider',
       },
       {
@@ -313,6 +340,14 @@ const pages = [
     ],
   },
   {
+    pathname: '/blog',
+    children: [
+      {
+        pathname: '/blog/2019-developer-survey-results',
+      },
+    ],
+  },
+  {
     pathname: '/versions',
     displayNav: false,
   },
@@ -350,6 +385,10 @@ class MyApp extends App {
     super();
     this.redux = initRedux(props.reduxServerState || {});
     this.pageContext = getPageContext();
+  }
+
+  componentDidMount() {
+    loadDependencies();
   }
 
   render() {

@@ -6,11 +6,11 @@ import { connect } from 'react-redux';
 import url from 'url';
 import { MuiThemeProvider } from '@material-ui/core/styles';
 import { StylesProvider } from '@material-ui/styles';
+import acceptLanguage from 'accept-language';
 import { lightTheme, darkTheme, setPrismTheme } from '@material-ui/docs/MarkdownElement/prism';
 import { updatePageContext } from 'docs/src/modules/styles/getPageContext';
 import { getCookie } from 'docs/src/modules/utils/helpers';
-import { ACTION_TYPES } from 'docs/src/modules/constants';
-import acceptLanguage from 'accept-language';
+import { ACTION_TYPES, CODE_VARIANTS } from 'docs/src/modules/constants';
 
 // Inject the insertion-point-jss after docssearch
 if (process.browser && !global.__INSERTION_POINT__) {
@@ -28,18 +28,24 @@ function themeSideEffect(reduxTheme) {
   document.body.dir = reduxTheme.direction;
 }
 
+acceptLanguage.languages(['en', 'zh']);
+
 class SideEffectsRaw extends React.Component {
   componentDidMount() {
     const { options } = this.props;
 
-    acceptLanguage.languages(['en', 'zh']);
     const URL = url.parse(document.location.href, true);
     const userLanguage = acceptLanguage.get(
-      URL.query.lang || getCookie('lang') || navigator.language || 'en',
+      URL.query.lang || getCookie('lang') || navigator.language,
     );
     const codeVariant = getCookie('codeVariant');
 
-    if (options.userLanguage !== userLanguage || options.codeVariant !== codeVariant) {
+    if (
+      (userLanguage && options.userLanguage !== userLanguage) ||
+      (codeVariant && options.codeVariant !== codeVariant)
+    ) {
+      window.ga('set', 'dimension1', codeVariant);
+      window.ga('set', 'dimension2', userLanguage);
       this.props.dispatch({
         type: ACTION_TYPES.OPTIONS_CHANGE,
         payload: {
@@ -47,6 +53,9 @@ class SideEffectsRaw extends React.Component {
           codeVariant,
         },
       });
+    } else {
+      window.ga('set', 'dimension1', CODE_VARIANTS.JS);
+      window.ga('set', 'dimension2', 'en');
     }
   }
 
@@ -136,7 +145,10 @@ class AppWrapper extends React.Component {
     const paletteType = getCookie('paletteType');
     const paletteColors = getCookie('paletteColors');
 
-    if (reduxTheme.paletteType !== paletteType || reduxTheme.paletteColors !== paletteColors) {
+    if (
+      (paletteType && reduxTheme.paletteType !== paletteType) ||
+      (paletteColors && JSON.stringify(reduxTheme.paletteColors) !== paletteColors)
+    ) {
       this.props.dispatch({
         type: ACTION_TYPES.THEME_CHANGE,
         payload: {

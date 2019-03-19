@@ -1,34 +1,34 @@
 # TypeScript
 
-<p class="description">You can add static typing to JavaScript to improve developer productivity and code quality thanks to TypeScript.</p>
+<p class="description">使用TypeScript，你可以为JavaScript添加类型接口，从而提高代码质量及工作效率</p>
 
-Have a look at the [Create React App with TypeScript](https://github.com/mui-org/material-ui/tree/master/examples/create-react-app-with-typescript) example. A minimum version of TypeScript 2.8 is required.
+例子：https://github. com/mui-org/material-ui/tree/master/examples/create-react-app-with-typescript TypeScript版本大于2.8
 
-Our definitions are tested with the following [tsconfig.json](https://github.com/mui-org/material-ui/tree/master/tsconfig.json). Using a less strict `tsconfig.json` or omitting some of the libraries might cause errors.
+我们的定义使用以下 [tsconfig.json](https://github.com/mui-org/material-ui/tree/master/tsconfig.json)进行测试。 使用不太严格的 `tsconfig.json` 或省略某些库可能会导致错误。
 
-## Usage of `withStyles`
+## WithStyles的使用
 
-Using `withStyles` in TypeScript can be a little tricky, but there are some utilities to make the experience as painless as possible.
+在TypeScript中使用 `withStyles` 可能有点棘手，但有一些实用程序可以使体验尽可能轻松。
 
-### Using `createStyles` to defeat type widening
+### 使用 `createStyles` 来打败类型扩展
 
-A frequent source of confusion is TypeScript's [type widening](https://blog.mariusschulz.com/2017/02/04/typescript-2-1-literal-type-widening), which causes this example not to work as expected:
+混淆的常见原因是TypeScript的 [类型扩展](https://blog.mariusschulz.com/2017/02/04/typescript-2-1-literal-type-widening)，这导致此示例无法按预期工作：
 
 ```ts
 const styles = {
-  root: {
+  root： {
     display: 'flex',
     flexDirection: 'column',
   }
 };
 
-withStyles(styles);
-//         ^^^^^^
-//         Types of property 'flexDirection' are incompatible.
+withStyles（样式）;
+// ^^^^^^
+//属性'flexDirection'的类型不兼容。
 //           Type 'string' is not assignable to type '"-moz-initial" | "inherit" | "initial" | "revert" | "unset" | "column" | "column-reverse" | "row"...'.
 ```
 
-The problem is that the type of the `flexDirection` property is inferred as `string`, which is too arbitrary. To fix this, you can pass the styles object directly to `withStyles`:
+问题是 `flexDirection` 属性的类型被推断为 `string`，这太任意了。 要解决此问题，您可以将样式对象直接传递给 `withStyles`：
 
 ```ts
 withStyles({
@@ -39,7 +39,7 @@ withStyles({
 });
 ```
 
-However type widening rears its ugly head once more if you try to make the styles depend on the theme:
+然而，如果您尝试使样式取决于主题，则类型扩展会再次显示其丑陋的头部：
 
 ```ts
 withStyles(({ palette, spacing }) => ({
@@ -53,9 +53,9 @@ withStyles(({ palette, spacing }) => ({
 }));
 ```
 
-This is because TypeScript [widens the return types of function expressions](https://github.com/Microsoft/TypeScript/issues/241).
+这是因为TypeScript [扩展了函数表达式](https://github.com/Microsoft/TypeScript/issues/241)的返回类型。
 
-Because of this, we recommend using our `createStyles` helper function to construct your style rules object:
+因此，我们建议使用我们的 `createStyles` 帮助函数来构造样式规则对象：
 
 ```ts
 // Non-dependent styles
@@ -78,11 +78,11 @@ const styles = ({ palette, spacing }: Theme) => createStyles({
 });
 ```
 
-`createStyles` is just the identity function; it doesn't "do anything" at runtime, just helps guide type inference at compile time.
+`createStyles` 只是身份函数;它不会在运行时“做任何事情”，只是在编译时指导类型推断。
 
-### Media queries
+### 媒体查询
 
-`withStyles` allows a styles object with top level media-queries like so:
+`withStyles` 允许样式对象具有顶级媒体查询，如下所示：
 
 ```ts
 const styles = createStyles({
@@ -97,7 +97,7 @@ const styles = createStyles({
 });
 ```
 
-However to allow these styles to pass TypeScript the definitions have to be ambiguous concerning names for CSS classes and actual CSS property names. Due to this class names that are equal to CSS properties should be avoided.
+但是，为了允许这些样式传递TypeScript，定义必须与CSS类的名称和实际的CSS属性名称不一致。 由于此类名称应与CSS属性相同，因此应避免使用。
 
 ```ts
 // error because TypeScript thinks `@media (min-width: 960px)` is a class name
@@ -126,9 +126,9 @@ const ambiguousStyles = createStyles({
 });
 ```
 
-### Augmenting your props using `WithStyles`
+### 使用 `WithStyles`道具
 
-Since a component decorated with `withStyles(styles)` gets a special `classes` prop injected, you will want to define its props accordingly:
+由于用 `withStyles(styles)` 装饰的组件获得了特殊的 `classes` prop注入，因此您需要相应地定义其props：
 
 ```ts
 const styles = (theme: Theme) => createStyles({
@@ -138,10 +138,10 @@ const styles = (theme: Theme) => createStyles({
 });
 
 interface Props {
-  // non-style props
+  // 非风格的属性
   foo: number;
   bar: boolean;
-  // injected style props
+  // 注入的样式属性
   classes: {
     root: string;
     paper: string;
@@ -150,7 +150,7 @@ interface Props {
 }
 ```
 
-However this isn't very [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) because it requires you to maintain the class names (`'root'`, `'paper'`, `'button'`, ...) in two different places. We provide a type operator `WithStyles` to help with this, so that you can just write
+然而，这是不是很 [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) ，因为它需要你保持类名（`'root'`， `'paper'`， `'button'`在两个不同的地方，...）。 我们提供了一个类型操作符 `WithStyles` 来帮助解决这个问题，以便您可以编写
 
 ```ts
 import { WithStyles, createStyles } from '@material-ui/core';
@@ -167,9 +167,9 @@ interface Props extends WithStyles<typeof styles> {
 }
 ```
 
-### Decorating components
+### 装饰组件
 
-Applying `withStyles(styles)` as a function works as expected:
+应用 `withStyles(styles)` 作为函数按预期方式工作：
 
 ```tsx
 const DecoratedSFC = withStyles(styles)(({ text, type, color, classes }: Props) => (
@@ -192,13 +192,13 @@ const DecoratedClass = withStyles(styles)(
 );
 ```
 
-Unfortunately due to a [current limitation of TypeScript decorators](https://github.com/Microsoft/TypeScript/issues/4881), `withStyles(styles)` can't be used as a decorator in TypeScript.
+不幸的是，由于TypeScript装饰器</a>的 当前限制， `withStyles(styles)` 不能用作TypeScript中的装饰器。</p> 
 
-## Customization of `Theme`
+## 自定义 `主题`
 
-When adding custom properties to the `Theme`, you may continue to use it in a strongly typed way by exploiting [Typescript's module augmentation](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#module-augmentation).
+向 `Theme`添加自定义属性时，您可以通过利用 [Typescript的模块扩充](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#module-augmentation)继续以强类型方式使用它。
 
-The following example adds an `appDrawer` property that is merged into the one exported by `material-ui`:
+以下示例添加了一个 `appDrawer` 属性，该属性合并到由 `material-ui`导出的属性中：
 
 ```ts
 import { Theme } from '@material-ui/core/styles/createMuiTheme';
@@ -221,7 +221,7 @@ declare module '@material-ui/core/styles/createMuiTheme' {
 }
 ```
 
-And a custom theme factory with additional defaulted options:
+以及带有其他默认选项的自定义主题工厂：
 
 **./styles/createMyTheme**:
 
@@ -239,10 +239,71 @@ export default function createMyTheme(options: ThemeOptions) {
 }
 ```
 
-This could be used like:
+这可以像：
 
 ```ts
 import createMyTheme from './styles/createMyTheme';
 
 const theme = createMyTheme({ appDrawer: { breakpoint: 'md' }});
+```
+
+## `组件的用法`属性
+
+Material-UI允许您通过`组件替换组件的根节点`属性。 例如，一个`按钮`的根节点可以用React Router ` Link替换` ，以及传递给` Button的任何其他道具` ，例如`到` ，将传播到`链接`组件，意味着你可以这样做：
+
+```jsx
+import { Link } from 'react-router-dom';
+
+<Button component={Link} to="/">Go Home</Button>
+```
+
+但是，TypeScript会抱怨它，因为`到`不属于` ButtonProps `接口，并且使用当前类型声明，它无法推断哪些道具可以传递给`组件` 。
+
+当前的解决方法是将链接转换为` any ` ：
+
+```tsx
+import { Link } from 'react-router-dom';
+import Button, { ButtonProps } from '@material-ui/core/Button';
+
+interface LinkButtonProps extends ButtonProps {
+  to: string;
+  replace?: boolean;
+}
+
+const LinkButton = (props: LinkButtonProps) => (
+  <Button {...props} component={Link as any} />
+)
+
+// usage:
+<LinkButton color="primary" to="/">Go Home</LinkButton>
+```
+
+Material-UI组件传递一些基本的事件处理程序道具（` onClick ` ，` onDoubleClick `等）到他们的根节点。 这些处理程序具有以下特征：
+
+```ts
+(event: MouseEvent<HTMLElement, MouseEvent>) => void
+```
+
+这与`链接的事件处理程序签名不兼容`期望，这是：
+
+```ts
+(event: MouseEvent<AnchorElement>) => void
+```
+
+传递到`组件的任何元素或组件`如果他们的事件处理程序道具的签名不匹配将会有这个问题。
+
+通过使组件道具具有通用性，一直在努力解决这个问题。
+
+### 避免属性冲突
+
+之前的策略受到一些限制：属性冲突。 提供`组件的组件`属性可能不会将其所有属性转发到根元素。 要解决此问题，您可以创建自定义组件：
+
+```tsx
+import { Link } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
+
+const MyLink = (props: any) => <Link to="/" {...props} />;
+
+// usage:
+<Button color="primary" component={MyLink}>Go Home</Button>
 ```
