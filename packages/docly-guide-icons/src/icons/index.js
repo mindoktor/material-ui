@@ -28,6 +28,7 @@ export { default as Hudbesvar } from './Hudbesvar';
 export { default as Huvudvark } from './Huvudvark';
 export { default as IllaluktandeFlytningar } from './IllaluktandeFlytningar';
 export { default as Infektioner } from './Infektioner';
+export { default as Injuries } from './Injuries';
 export { default as Insektsbett } from './Insektsbett';
 export { default as KladaIUnderlivet } from './KladaIUnderlivet';
 export { default as Klamydia } from './Klamydia';
